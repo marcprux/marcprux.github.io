@@ -1,3 +1,0 @@
-
-Marc Prud'hommeaux
-
