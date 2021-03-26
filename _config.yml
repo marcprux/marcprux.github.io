@@ -25,11 +25,11 @@ footer-links:
   flickr:
   github: marcprux
   instagram:
-  linkedin: https://www.linkedin.com/in/marcprux/
+  linkedin: marcprux
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: #jekyllrb
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/228600/marcprux # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
