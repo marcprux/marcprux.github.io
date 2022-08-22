@@ -2,7 +2,11 @@
 # This file contains configuration flags to customize your site
 #
 
-remote_theme: "mmistakes/minimal-mistakes@4.22.0"
+#remote_theme: "mmistakes/minimal-mistakes@4.22.0"
+remote_theme: zendesk/jekyll-theme-zendesk-garden@main
+# remote_theme: pages-themes/slate@main
+# remote_theme: pages-themes/slate@v0.2.0
+
 
 # Name of your site (displayed in the header)
 name: Marc Prud'hommeaux
