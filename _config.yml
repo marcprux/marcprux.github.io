@@ -22,6 +22,33 @@ name: Marc Prud'hommeaux
 
 avatar: https://avatars.githubusercontent.com/u/659086?v=4
 
+include:
+    - "_pages"
+
+permalink: /:categories/:year/:month/:day/:title/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      classes: wide
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      classes: wide
 
 #
 # Flags below are optional
@@ -71,7 +98,7 @@ XXXpermalink: /:title/
 XXXversion: v1.2.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
-XXXkramdown:
+kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
@@ -81,11 +108,11 @@ XXXkramdown:
     css_class: 'highlight'
 
 # Set the Sass partials directory, as we're using @imports
-XXXsass:
+sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-XXXgems:
+gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
