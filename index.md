@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Greetings :vulcan_salute: I am ***Marc Prud'hommeaux*** (pronounced *ˈprʊːdəˌmoʊ* in en-US, *prydəmo* in fr-FR)<!-- and Miss Jackson if you're nasty -->.
+Greetings 🖖 I am ***Marc Prud'hommeaux*** (pronounced *ˈprʊːdəˌmoʊ* in en-US, *prydəmo* in fr-FR)<!-- and Miss Jackson if you're nasty -->.
 
 I have been programming computers since 1983. <!-- O.G. --> I now mostly write applications in the Swift language for Linux and Apple platforms, but I have broad experience in C, Rust, SQL (many flavors), JVM languages (Java, Scala, Kotlin), JS, etc. <!-- and All. That. Jazz. -->
 
