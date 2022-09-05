@@ -2,6 +2,8 @@
 # This file contains configuration flags to customize your site
 #
 
+remote_theme: "mmistakes/minimal-mistakes@4.22.0"
+
 #remote_theme: "mmistakes/minimal-mistakes@4.22.0"
 #remote_theme: zendesk/jekyll-theme-zendesk-garden@main
 
