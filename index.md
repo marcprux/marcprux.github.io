@@ -10,7 +10,7 @@ Here are some things I'm working on.
 
 #### Free Software: <!-- Virtue time! -->
 
-* [🌞 Sun Bow](https://github.com/Sun-Bow): An open source weather app for iPhone, iPad and macOS ([join the TestFlight](https://testflight.apple.com/join/IrPLgy5Q) for frequent beta releases, or [🥰 star](https://github.com/Sun-Bow/App) the repo for encouragement!)
+* [🌞 Sun Bow](https://github.com/Sun-Bow): An open source weather app for iPhone, iPad and macOS ([join the TestFlight](https://testflight.apple.com/join/0dqMR6uN) for frequent beta releases, or [🥰 star](https://github.com/Sun-Bow/App) the repo for encouragement!)
 * [🌈 WeatherTiq](https://github.com/tiqtiq/WeatherTiq): An OSS drop-in [WeatherKit](https://developer.apple.com/documentation/weatherkit) replacement for Linux, macOS12, and iOS15 (please [star ⭐](https://github.com/tiqtiq/WeatherTiq) the framework!)
 * [<img alt="The App Fair icon" align="center" style="width: 24px;" src="https://appfair.net/appfair-icon.svg" /> The App Fair](https://appfair.net): An automated distribution network for macOS apps providing security and trustworthiness through reproducible builds with GitHub actions (please [🐦 follow on Twitter](https://twitter.com/theappfair), [🗨️  join the Discord](http://discord.gg/R4bFP8qpw7), or [💫 build your own app](https://appfair.net/#quick-start)!)
 * [   App Fair.app](https://appfair.app): A native macOS catalog application for the App Fair and Homebrew Cask appsource catalogs (please [💎 download](https://github.com/App-Fair/App/releases/latest/download/App-Fair-macOS.zip) and [star ⭐](https://github.com/App-Fair/App) the app, or `brew install app-fair`)
