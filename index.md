@@ -18,7 +18,7 @@ Here are some things I'm working on.
 
 #### Profiteering: <!-- Oh man, I am wicked broke! -->
 
- * 🤓 **Consulting**: I specialize in designing and creating green-field client (SwiftUI) / server (Vapor) native app platforms for iOS, macOS, and Linux ([🤙 reach out](mailto:marc@prux.org) and get an MVP launched fast! 🚀) <!-- Seriously, like you'll have a beta in a week or two. -->
+ * 🤓 **Consulting**: I specialize in designing and creating green-field client (SwiftUI) / server (Vapor) native app platforms for iOS, macOS, and Linux ([🤙 reach out](mailto:marc@prux.org)) <!-- Seriously, like you'll have a beta in a week or two. -->
  * 😔 **Hiring**: I am unavailable for permanent hire (but don't let that stop you from [asking anyway 🙄](https://www.linkedin.com/in/marcprux/)) <!-- If we must. -->
  * 🧐 **On-site Talks**: I sometimes give invited talks and presentations on various Swift development topics ([ping me](https://signal.me/#u/marcprux)) <!-- Send me some jucy tidbits! -->
 
