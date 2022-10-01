@@ -2,13 +2,13 @@
 layout: default
 ---
 
-Greetings 🖖 I am ***Marc Prud'hommeaux*** (pronounced *ˈprʊːdəˌmoʊ* in en-US, *prydəmo* in fr-FR)<!-- and Miss Jackson if you're nasty -->.
+Greetings 🖖 I am ***Marc Prud'hommeaux*** (pronounced *ˈprʊːdəˌmoʊ* in en-US, *prydəmo* in fr-FR)
 
-I have been programming computers since 1983. <!-- O.G. --> I now mostly write applications in the Swift language for Linux and Apple platforms, but I have broad experience in C, Rust, SQL (many flavors), JVM languages (Java, Scala, Kotlin), JS, etc. <!-- and All. That. Jazz. -->
+I have been programming computers since 1983. I now mostly write applications in the Swift language for Linux and Apple platforms, but I have broad experience in C, Rust, SQL (many flavors), JVM languages (Java, Scala, Kotlin), JS, etc. 
 
 Here are some things I'm working on.
 
-#### Free Software: <!-- Virtue time! -->
+#### Free Software: 
 
 * [⌨️ Live Coding](https://appfair.net/live): I stream live every Tuesday and Thursday on Twitch from 11:30AM-1:30PM EST, where I design, develop, and deploy open-source iOS and macOS apps. Stop by and ask me anything in the chat! See the [Twitch Schedule](https://www.twitch.tv/appfair/schedule) for the up-to-date info and to follow me.
 * [🌞 Sun Bow](https://github.com/Sun-Bow): An open source weather app for iPhone, iPad and macOS ([join the TestFlight](https://testflight.apple.com/join/0dqMR6uN) for frequent beta releases, or [🥰 star](https://github.com/Sun-Bow/App) the repo for encouragement!)
@@ -17,22 +17,21 @@ Here are some things I'm working on.
 * [   App Fair.app](https://appfair.app): A native macOS catalog application for the App Fair and Homebrew Cask appsource catalogs (please [💎 download](https://github.com/App-Fair/App/releases/latest/download/App-Fair-macOS.zip) and [star ⭐](https://github.com/App-Fair/App) the app, or `brew install app-fair`)
 * [💝 Open source](https://github.com/marcprux): I contribute to numerous other open source projects, including the [⚖️ Fair.git](https://github.com/fair-ground/Fair/) modules that power App Fair apps and distribution (please [star 🤩](https://github.com/fair-ground/Fair) the repo!)
 
-#### Profiteering: <!-- Oh man, I am wicked broke! -->
+#### Profiteering: 
 
- * 🤓 **Consulting**: I specialize in designing and creating green-field client (SwiftUI) / server (Vapor) native app platforms for iOS, macOS, and Linux ([🤙 reach out](mailto:marc@prux.org)) <!-- Seriously, like you'll have a beta in a week or two. -->
- * 😔 **Hiring**: I am unavailable for permanent hire (but don't let that stop you from [asking anyway 🙄](https://www.linkedin.com/in/marcprux/)) <!-- If we must. -->
- * 🧐 **On-site Talks**: I sometimes give invited talks and presentations on various Swift development topics ([ping me](https://signal.me/#u/marcprux)) <!-- Send me some jucy tidbits! -->
+ * 🤓 **Consulting**: I specialize in designing and creating green-field client (SwiftUI) / server (Vapor) native app platforms for iOS, macOS, and Linux ([🤙 reach out](mailto:marc@prux.org)) 
+ * 😔 **Hiring**: I am unavailable for permanent hire (but don't let that stop you from [asking anyway 🙄](https://www.linkedin.com/in/marcprux/)) 
+ * 🧐 **On-site Talks**: I sometimes give invited talks and presentations on various Swift development topics ([ping me](https://signal.me/#u/marcprux)) 
 
 #### Hobbies:
 
-* 🎹 **Music**: I am an aspiring melodica player. Never had one lesson, but I assure you that that won't stop me from playing at your event! <!-- and ruining it -->
-* 🏃 **Running**: I enjoy running, both in my home city of Boston as well as when travelling. I have logged (with RunKeeper) around 8,000 miles (~13,000 km) in the past decade across five continents, including eight half-marathons and five full marathons (most recently Paris 2022) <!-- This signals that I am healthy. -->
-* 🛩️ **Airplanes**: I am an FAA-licensed singe-engine fixed-wing aircraft pilot with a commercial certificate, instrument rating, and complex & high-performance endorsements (300 PIC hours in: Cessna 172, Piper Warrior, Archer, Arrow, Diamond DA-40, Cirrus SR-20 and SR-22) <!-- Trustworthiness and attention to detail! -->
+* 🏃 **Running**: I enjoy running, both in my home city of Boston as well as when travelling. I have logged (with RunKeeper) around 8,000 miles (~13,000 km) in the past decade across five continents, including eight half-marathons and five full marathons (most recently Paris 2022) 
+* 🛩️ **Airplanes**: I am an FAA-licensed singe-engine fixed-wing aircraft pilot with a commercial certificate, instrument rating, and complex & high-performance endorsements (300 PIC hours in: Cessna 172, Piper Warrior, Archer, Arrow, Diamond DA-40, Cirrus SR-20 and SR-22) 
 
 #### Older stuff:
 
-* ✍️ I have only ever posted but a single tweet, back in 2008. [Follow me](https://twitter.com/marcprux) and I pledge that I will compose another one once I hit 25k followers. <!-- Last time I checked, I had 46 followers. -->
-* 📖 Also back in 2008, I developed [Stanza](https://web.archive.org/web/20111206101048/http://www.lexcycle.com/), the first iPhone ebook reader on the App Store. <!-- I'll tell that story someday. -->
+* ✍️ I have only ever posted but a single tweet, back in 2008. [Follow me](https://twitter.com/marcprux) and I pledge that I will compose another one once I hit 25k followers. 
+* 📖 Also back in 2008, I developed [Stanza](https://web.archive.org/web/20111206101048/http://www.lexcycle.com/), the first iPhone ebook reader on the App Store. 
 
 
 
