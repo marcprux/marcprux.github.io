@@ -10,7 +10,6 @@ Here are some things I'm working on.
 
 #### Free Software: 
 
-* [⌨️ Live Coding](https://appfair.net/live): I stream live every Tuesday and Thursday on Twitch from 11:30AM-1:30PM EST, where I design, develop, and deploy open-source iOS and macOS apps. Stop by and ask me anything in the chat! See the [Twitch Schedule](https://www.twitch.tv/appfair/schedule) for the up-to-date info and to follow me.
 * [🌞 Sun Bow](https://github.com/Sun-Bow): An open source weather app for iPhone, iPad and macOS ([join the TestFlight](https://testflight.apple.com/join/0dqMR6uN) for frequent beta releases, or [🥰 star](https://github.com/Sun-Bow/App) the repo for encouragement!)
 * [🌈 WeatherTiq](https://github.com/tiqtiq/WeatherTiq): An OSS drop-in [WeatherKit](https://developer.apple.com/documentation/weatherkit) replacement for Linux, macOS12, and iOS15 (please [star ⭐](https://github.com/tiqtiq/WeatherTiq) the framework!)
 * [<img alt="The App Fair icon" align="center" style="width: 24px;" src="https://appfair.net/appfair-icon.svg" /> The App Fair](https://appfair.net): An automated distribution network for macOS apps providing security and trustworthiness through reproducible builds with GitHub actions (please [🐦 follow on Twitter](https://twitter.com/theappfair), [🗨️  join the Discord](http://discord.gg/R4bFP8qpw7), or [💫 build your own app](https://appfair.net/#quick-start)!)
@@ -27,11 +26,4 @@ Here are some things I'm working on.
 
 * 🏃 **Running**: I enjoy running, both in my home city of Boston as well as when travelling. I have logged (with RunKeeper) around 8,000 miles (~13,000 km) in the past decade across five continents, including eight half-marathons and five full marathons (most recently Paris 2022) 
 * 🛩️ **Airplanes**: I am an FAA-licensed singe-engine fixed-wing aircraft pilot with a commercial certificate, instrument rating, and complex & high-performance endorsements (300 PIC hours in: Cessna 172, Piper Warrior, Archer, Arrow, Diamond DA-40, Cirrus SR-20 and SR-22) 
-
-#### Older stuff:
-
-* ✍️ I have only ever posted but a single tweet, back in 2008. [Follow me](https://twitter.com/marcprux) and I pledge that I will compose another one once I hit 25k followers. 
-* 📖 Also back in 2008, I developed [Stanza](https://web.archive.org/web/20111206101048/http://www.lexcycle.com/), the first iPhone ebook reader on the App Store. 
-
-
 
