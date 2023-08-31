@@ -7,4 +7,5 @@ Greetings 🖖 I am ***Marc Prud'hommeaux*** (pronounced *ˈprʊːdəˌmoʊ* in 
 #### Contact:
 
 <a href="marc@prux.org">marc@prux.org</a>
+<a rel="me" href="https://mastodon.social/@marcprux">Mastodon</a>
 
