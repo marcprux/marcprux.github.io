@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const locale = Astro.currentLocale ?? config.site.lang;
+
+const notes = await getCollection("notes", ({ data }) => !data.draft);
+const sorted = notes.sort(
+  (a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime()
+);
+---
+
+<Layout
+  title={`Notes | ${config.site.title}`}
+  description="Shorter writing — preferences, how-tos, and offhand observations."
+>
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="pt-6 pb-2">
+      <h1 class="mb-3">Notes</h1>
+      <p class="text-muted-foreground mb-6">
+        Shorter writing — preferences, how-tos, and offhand observations.
+      </p>
+    </section>
+
+    <ul class="list-none space-y-3 p-0">
+      {
+        sorted.map(note => (
+          <li class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+            <span class="text-muted-foreground sm:min-w-[8.5rem] text-sm tabular-nums">
+              {note.data.pubDatetime.toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </span>
+            <a href={getRelativeLocaleUrl(locale, `notes/${note.id}`)}>
+              {note.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+  <Footer />
+</Layout>

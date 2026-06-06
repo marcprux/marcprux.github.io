@@ -1,0 +1,39 @@
+/* Minimal palette — warm light, calm dark, sparing accent. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --font-app:
+    "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  --font-mono:
+    ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Light — warm off-white */
+:root,
+[data-theme="light"] {
+  --background: #fdfcfa;
+  --foreground: #1f1c1a;
+  --accent: #b03a2e;
+  --accent-foreground: #fdfcfa;
+  --muted: #f4f1eb;
+  --muted-foreground: #6b665e;
+  --border: #e2ddd3;
+}
+
+/* Dark — calm charcoal */
+[data-theme="dark"] {
+  --background: #16151a;
+  --foreground: #e8e3da;
+  --accent: #ef6356;
+  --accent-foreground: #16151a;
+  --muted: #232228;
+  --muted-foreground: #9a948a;
+  --border: #2c2b32;
+}

@@ -1,0 +1,38 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
+import config from "@/config";
+
+export async function getStaticPaths() {
+  const notes = await getCollection("notes", ({ data }) => !data.draft);
+  return notes.map(note => ({
+    params: { slug: note.id },
+    props: { note },
+  }));
+}
+
+type Props = { note: CollectionEntry<"notes"> };
+const { note } = Astro.props;
+const { Content } = await render(note);
+
+const pubDate = note.data.pubDatetime.toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+---
+
+<Layout
+  title={`${note.data.title} | ${config.site.title}`}
+  description={note.data.description}
+>
+  <Header />
+  <Main pageTitle={note.data.title} class="app-prose">
+    <p class="text-muted-foreground mt-0 mb-6 text-sm">{pubDate}</p>
+    <Content />
+  </Main>
+  <Footer />
+</Layout>

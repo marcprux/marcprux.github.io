@@ -1,0 +1,97 @@
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  .app-prose {
+    @apply prose;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    th {
+      @apply text-foreground;
+    }
+
+    p,
+    strong,
+    ol,
+    ul,
+    figcaption,
+    table,
+    code {
+      @apply text-foreground;
+    }
+
+    a {
+      @apply text-accent underline decoration-1 underline-offset-[3px] hover:no-underline;
+    }
+
+    li {
+      @apply marker:text-muted-foreground;
+    }
+
+    hr {
+      @apply border-border;
+    }
+
+    img {
+      @apply mx-auto;
+    }
+
+    figcaption {
+      @apply text-muted-foreground;
+    }
+
+    table {
+      th,
+      td {
+        @apply border-border border p-2;
+      }
+    }
+
+    code {
+      @apply bg-muted text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+    }
+
+    .astro-code code {
+      @apply flex-[1_0_100%] bg-inherit p-0;
+    }
+
+    pre,
+    pre code,
+    kbd,
+    samp {
+      font-family: var(--font-mono);
+    }
+
+    blockquote {
+      @apply border-s-accent text-muted-foreground wrap-break-word;
+    }
+  }
+
+  /* ===== Code Blocks ===== */
+  .astro-code {
+    @apply outline-border flex border bg-(--shiki-light-bg) text-(--shiki-light) [&_span]:text-(--shiki-light);
+  }
+
+  html[data-theme="dark"] .astro-code {
+    @apply bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+  }
+
+  .astro-code {
+    .line.diff.add {
+      @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+    }
+    .line.diff.remove {
+      @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+    }
+    .line.highlighted {
+      @apply inline-block w-full bg-slate-400/20;
+    }
+    .highlighted-word {
+      @apply border-border rounded-sm border px-0.5 py-px;
+    }
+  }
+}

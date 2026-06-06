@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "./fonts.css";
+@import "./theme.css";
+@import "./typography.css";
+@import "rehype-callouts/theme/obsidian";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply selection:bg-accent/20 selection:text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl;
+    line-height: 1.1;
+  }
+  h2 {
+    @apply text-2xl sm:text-3xl;
+    line-height: 1.2;
+  }
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
+
+  a {
+    @apply text-accent underline decoration-1 underline-offset-[3px] hover:no-underline;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-accent outline-2 outline-offset-2 outline-dashed;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  hr {
+    @apply border-border my-10 border-t;
+  }
+}
+
+@utility max-w-app {
+  @apply max-w-2xl;
+}
+
+@utility app-layout {
+  @apply max-w-app mx-auto w-full px-5 sm:px-6;
+}
+
+@utility active-nav {
+  @apply text-accent font-semibold;
+}
+
+:target {
+  scroll-margin-block: 5rem;
+}
