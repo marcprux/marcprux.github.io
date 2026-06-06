@@ -72,3 +72,10 @@
 :target {
   scroll-margin-block: 5rem;
 }
+
+/* Slow the shared headshot morph between pages — default ~250ms feels
+   abrupt when the size delta is large (32 px → 128 px). */
+::view-transition-group(headshot) {
+  animation-duration: 420ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

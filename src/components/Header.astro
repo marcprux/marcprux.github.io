@@ -27,6 +27,11 @@ const isActive = (path: string) => {
   const pathArray = path.split("/").filter(p => p.trim());
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
+
+// Home and About already render the headshot inline. Showing it in the
+// header on those pages would duplicate the view-transition-name and break
+// the morph; everywhere else, render a 32-px version in the header.
+const showHeaderHeadshot = currentPath !== "/" && currentPath !== "/about";
 ---
 
 <a
@@ -41,8 +46,20 @@ const isActive = (path: string) => {
   <div class="flex w-full items-center justify-between gap-4">
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="hover:text-accent text-foreground text-lg font-semibold no-underline transition-colors"
+      class="hover:text-accent text-foreground inline-flex items-center gap-2.5 text-lg font-semibold no-underline transition-colors"
     >
+      {
+        showHeaderHeadshot && (
+          <img
+            src="/headshot.png"
+            alt=""
+            width="32"
+            height="32"
+            class="border-border size-8 shrink-0 rounded-full border object-cover"
+            style="view-transition-name: headshot;"
+          />
+        )
+      }
       {site.title}
     </a>
     <nav id="nav-menu" class="flex items-center">
