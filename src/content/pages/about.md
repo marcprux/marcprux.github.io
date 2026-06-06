@@ -3,6 +3,8 @@ title: "About"
 description: "A bit about Marc Prud'hommeaux."
 ---
 
+<img src="/headshot.png" alt="Marc Prud'hommeaux" width="160" height="160" class="not-prose mb-6 size-32 rounded-full border border-border object-cover shadow-sm sm:size-40" loading="eager" />
+
 I'm **Marc Prud'hommeaux** — a software developer based in New England.
 
 I studied at [Cornell University](https://www.cornell.edu/) and have spent

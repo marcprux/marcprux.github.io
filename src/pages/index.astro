@@ -35,14 +35,25 @@ const homePath = getRelativeLocaleUrl(locale, "");
     data-home-path={homePath}
     class="app-layout"
   >
-    <section id="hero" class="pt-6 pb-2">
-      <h1 class="mb-4">Marc Prud&rsquo;hommeaux</h1>
-      <p class="text-lg leading-relaxed">
-        Software developer in New England. Pronounced
-        <em>ˈprʊːdəˌmoʊ</em> in en-US, <em>prydəmo</em> in fr-FR. More
-        <a href={getRelativeLocaleUrl(locale, "about")}>about me</a> if
-        you&rsquo;d like.
-      </p>
+    <section id="hero" class="flex flex-col items-start gap-6 pt-6 pb-2 sm:flex-row sm:items-center">
+      <img
+        src="/headshot.png"
+        alt="Marc Prud'hommeaux"
+        width="120"
+        height="120"
+        class="border-border size-24 shrink-0 rounded-full border object-cover shadow-sm sm:size-32"
+        loading="eager"
+        decoding="async"
+      />
+      <div>
+        <h1 class="mb-3">Marc Prud&rsquo;hommeaux</h1>
+        <p class="text-lg leading-relaxed">
+          Software developer in New England. Pronounced
+          <em>ˈprʊːdəˌmoʊ</em> in en-US, <em>prydəmo</em> in fr-FR. More
+          <a href={getRelativeLocaleUrl(locale, "about")}>about me</a> if
+          you&rsquo;d like.
+        </p>
+      </div>
     </section>
 
     <hr />
