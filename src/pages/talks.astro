@@ -1,0 +1,36 @@
+---
+import { getEntry, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const talks = await getEntry("pages", "talks");
+
+if (!talks) {
+  throw new Error(
+    "Missing content entry: `talks.md` or `talks.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content } = await render(talks);
+---
+
+<Layout
+  title={`${talks.data.title} | ${config.site.title}`}
+  description={talks.data.description}
+  ogImage={talks.data.ogImage}
+  canonicalURL={talks.data.canonicalURL}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={talks.data.title} class="app-prose">
+    <Content />
+  </Main>
+
+  <Footer />
+</Layout>

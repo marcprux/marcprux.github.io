@@ -86,6 +86,17 @@ const isActive = (path: string) => {
         </li>
         <li>
           <a
+            href={getRelativeLocaleUrl(locale, "talks")}
+            class:list={[
+              "text-foreground hover:text-accent no-underline",
+              { "active-nav": isActive("/talks") },
+            ]}
+          >
+            Talks
+          </a>
+        </li>
+        <li>
+          <a
             href={getRelativeLocaleUrl(locale, "about")}
             class:list={[
               "text-foreground hover:text-accent no-underline",
