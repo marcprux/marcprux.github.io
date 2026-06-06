@@ -7,7 +7,6 @@ type Props = {
 } & HTMLAttributes<"footer">;
 
 const { noMarginTop = false, class: className, ...attrs } = Astro.props;
-const currentYear = new Date().getFullYear();
 ---
 
 <footer
@@ -15,10 +14,7 @@ const currentYear = new Date().getFullYear();
   {...attrs}
 >
   <hr />
-  <div
-    class="text-muted-foreground flex flex-col items-start justify-between gap-3 pb-10 text-sm sm:flex-row sm:items-center"
-  >
-    <span>© {currentYear} Marc Prud&rsquo;hommeaux</span>
+  <div class="flex justify-center pb-10">
     <Socials />
   </div>
 </footer>

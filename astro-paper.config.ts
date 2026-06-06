@@ -27,8 +27,8 @@ export default defineAstroPaperConfig({
     search: "pagefind",
   },
   socials: [
-    { name: "linkedin", url: "https://www.linkedin.com/in/marcprux/" },
     { name: "mastodon", url: "https://mastodon.social/@marcprux" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/marcprux/" },
     { name: "mail",     url: "mailto:mwp1@cornell.edu" },
   ],
   shareLinks: [
