@@ -82,6 +82,21 @@ recording.
   [blog](https://skip.dev/blog/skip-on-compile-swift-podcast/).
   Introducing Skip to the Swift developer community.
 
+## 2019
+
+- **July 30, 2019** — _"SwiftUI: Declarative UI Development for the
+  Modern Era"_ at **SwiftFest 2019** (Boston, Track 1, 4:00–5:00 PM,
+  in-person; sponsored in part by Double Espresso /
+  [2xe.io](https://www.2xe.io)) —
+  [recording](https://www.pluralsight.com/courses/swiftfest-boston-2019-session-28) /
+  [schedule](https://swiftfest.io/schedule/) /
+  [speaker page](https://swiftfest.io/speakers/) /
+  [conference recap](https://cantina.co/what-we-learned-at-swiftfest-2019/).
+  A live introduction to the just-announced SwiftUI framework — covering
+  declarative UI, code sharing from watchOS up through macOS, and
+  closing with a toy SwiftUI app that fit a working, animated UI into
+  273 lines of code.
+
 ## 2015
 
 - **May 2015** — _"Swift: New Paradigms for iOS Development"_ at
