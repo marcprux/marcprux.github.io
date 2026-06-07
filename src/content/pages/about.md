@@ -65,3 +65,8 @@ Verify you got the right key by checking the fingerprint:
 
 Use it for encrypted email to `mwp1@cornell.edu`, or to verify
 detached signatures on anything I publish.
+
+## Off the keyboard
+
+I hold an FAA Commercial Pilot Certificate for Airplane Single-Engine Land,
+with an Instrument Rating and a high-performance endorsement.
