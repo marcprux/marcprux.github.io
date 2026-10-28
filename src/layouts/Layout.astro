@@ -1,10 +1,12 @@
 ---
 import { res } from "@/resources/generated";
 import { ClientRouter } from "astro:transitions";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { RSS_PATH } from "@/utils/rss";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath } from "@/utils/withBase";
 import config from "@/config";
+import Analytics from "@/components/Analytics.astro";
+import { analyticsEndpoint } from "@/utils/analytics";
 import "@/styles/global.css";
 
 type Props = {
@@ -24,10 +26,6 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
-const rssHref = getRelativeLocaleUrl(
-  Astro.currentLocale ?? config.site.lang,
-  "rss.xml",
-);
 ---
 
 <!doctype html>
@@ -74,7 +72,7 @@ const rssHref = getRelativeLocaleUrl(
       rel="alternate"
       type="application/rss+xml"
       title={site.title}
-      href={new URL(rssHref, Astro.site)}
+      href={new URL(RSS_PATH, Astro.site)}
     />
 
     <!-- Filled at runtime by theme.ts to match the current background colour -->
@@ -125,6 +123,7 @@ const rssHref = getRelativeLocaleUrl(
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
   >
     <slot />
+    {analyticsEndpoint && <Analytics {title} />}
     <script>
       import "@/scripts/theme";
     </script>

@@ -1,0 +1,81 @@
+{
+  "researched_at": "2026-10-28",
+  "recommendation": "GoatCounter hosted: free for reasonable public usage, open source, cookie-free visit counting, per-article RSS image endpoint without creating a pixel manually for every article.",
+  "platforms": [
+    {
+      "name": "GoatCounter",
+      "cost": "Free hosted for reasonable public usage; donations optional. Self-hosting also available.",
+      "fit": "Recommended for this personal site and RSS image loads.",
+      "sources": [
+        "https://www.goatcounter.com/",
+        "https://www.goatcounter.com/help/pixel",
+        "https://www.goatcounter.com/help/privacy",
+        "https://www.goatcounter.com/help/sessions"
+      ]
+    },
+    {
+      "name": "Umami Cloud",
+      "cost": "Hobby: free, one website, 100,000 events/month, 6 months retention. Pro: $20/month.",
+      "fit": "Good free alternative. Version 3 supports tracking pixels created through its dashboard; confirm plan-specific pixel quotas before choosing.",
+      "sources": [
+        "https://umami.is/pricing",
+        "https://docs.umami.is/docs/pixels",
+        "https://docs.umami.is/docs/collect-data"
+      ]
+    },
+    {
+      "name": "Plausible",
+      "cost": "Starter: $9/month for up to 10,000 monthly pageviews, one site; annual billing discount.",
+      "fit": "Good paid option with EU hosting. The documented Events API requires POST; an RSS img GET would need a separate collector/bridge.",
+      "sources": [
+        "https://plausible.io/#pricing",
+        "https://plausible.io/docs/events-api"
+      ]
+    },
+    {
+      "name": "Cloudflare Web Analytics",
+      "cost": "Free",
+      "fit": "Browser traffic and performance; JavaScript beacon works on GitHub Pages without changing DNS. Not a drop-in RSS tracking-image service.",
+      "sources": [
+        "https://www.cloudflare.com/web-analytics/",
+        "https://developers.cloudflare.com/web-analytics/get-started/"
+      ]
+    },
+    {
+      "name": "Simple Analytics",
+      "cost": "Free hobby tier: 5 sites, one user, 1 month history, visible badge required.",
+      "fit": "Short retention and required badge make it less suitable here.",
+      "sources": [
+        "https://www.simpleanalytics.com/pricing",
+        "https://docs.simpleanalytics.com/free-plan-badge"
+      ]
+    }
+  ],
+  "feed_findings": {
+    "canonical": "https://www.prux.org/rss.xml",
+    "duplicate": "Autodiscovery advertised /rss.xml/ (404); footer advertised /rss.xml (200). Only one feed generator exists. Both now use /rss.xml, with an Atom self-link inside the RSS feed, not a second Atom feed.",
+    "content": "Full rendered HTML is sanitized, links and image URLs made absolute. Original item GUIDs preserved. pubDate uses original publication date rather than revision date."
+  },
+  "integration": {
+    "status": "Enabled for production builds with https://marcprux.goatcounter.com/count, supplied by Marc on 2026-10-28. Requires Marc to commit/push and the existing GitHub Pages deployment to complete.",
+    "configuration": "Configured in src/analytics.config.ts. No API key or GitHub secret required. Dashboard: https://marcprux.goatcounter.com/user/dashboard.",
+    "browser": "Production only. Tracks completed Astro page loads. Path omits query strings and fragments. A noscript 1x1 image provides a fallback without counting twice for JavaScript users.",
+    "rss": "One invisible 1x1 image per article, with p=/rss/posts/<slug>/ and the article title. Unique per article, not per person. No subscriber identifiers.",
+    "preview": "Dev mode emits no tracking script or pixels. Production JS also checks the deployed hostname; no-JavaScript production previews and opened production RSS exports still contain the live pixel URLs once configured.",
+    "metrics": "Browser page visits and /rss/ image-load visits are separate. Image caching/proxying/blocking/preloading and bots mean RSS loads cannot establish exact readership or completed reads. Do not add the two channels together as unique people."
+  },
+  "limitations": [
+    "Hosted GitHub Pages cannot implement a dynamic image-counting endpoint itself; analytics needs an external collector or separately hosted service.",
+    "No historical visitor counts can be recovered from adding this integration now.",
+    "GoatCounter deduplicates visits using site/IP/User-Agent held in memory for up to eight hours; it is not identity-based counting."
+  ],
+  "validation": [
+    "Production build and Astro check pass.",
+    "Enabled integration tested against a synthetic .invalid endpoint in a temporary build, with no requests sent to an analytics service.",
+    "All five RSS items match full website article text, keep existing GUIDs, contain no scripts, and use absolute links.",
+    "One canonical RSS discovery link per generated page.",
+    "Enabled RSS includes exactly one distinct pixel per article.",
+    "Tracker initialization tested with early and late script load, initial load, client navigation/back, repeat setup, and local host exclusion.",
+    "Production build verified with Marc’s real endpoint and five distinct RSS article pixels; homepage, article, and RSS development previews contain no tracking. No synthetic visits sent to the live collector."
+  ]
+}

@@ -1,0 +1,41 @@
+---
+import { analyticsEndpoint, trackingPixelUrl } from "@/utils/analytics";
+import config from "@/config";
+
+const productionHost = new URL(config.site.url).hostname;
+const pixel = trackingPixelUrl(
+  Astro.url.pathname,
+  Astro.props.title ?? config.site.title,
+);
+---
+
+<script is:inline define:vars={{ endpoint: analyticsEndpoint, productionHost }}>
+  (() => {
+    // Do not record previews or install duplicate navigation listeners.
+    if (location.hostname !== productionHost || window.goatcounter) return;
+    window.goatcounter = { no_onload: true, endpoint };
+    let pending = false;
+    function countPage() {
+      if (!pending || !window.goatcounter.count) return;
+      pending = false;
+      window.goatcounter.count({
+        path: location.pathname,
+        title: document.title,
+      });
+    }
+    // Covers initial load and Astro client-side navigation. Wait for the
+    // tracker if it loads after the first page-load event.
+    document.addEventListener("astro:page-load", () => {
+      pending = true;
+      countPage();
+    });
+    const script = document.createElement("script");
+    script.src = "https://gc.zgo.at/count.js";
+    script.async = true;
+    script.addEventListener("load", countPage);
+    document.head.appendChild(script);
+  })();
+</script>
+<noscript>
+  <img src={pixel} width="1" height="1" alt="" aria-hidden="true" />
+</noscript>

@@ -2,6 +2,7 @@
 import type { HTMLAttributes } from "astro/types";
 import { res } from "@/resources/generated";
 import config from "@/config";
+import { RSS_PATH } from "@/utils/rss";
 type Props = { noMarginTop?: boolean } & HTMLAttributes<"footer">;
 const { noMarginTop: _noMarginTop, class: className, ...attrs } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
@@ -12,7 +13,7 @@ const links = [
     href: "https://mastodon.social/@marcprux",
     label: res.str.footerMastodon(locale),
   },
-  { href: "/rss.xml", label: res.str.footerRss(locale) },
+  { href: RSS_PATH, label: res.str.footerRss(locale) },
   { href: "/search/", label: res.str.navSearch(locale) },
 ];
 ---
