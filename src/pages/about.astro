@@ -2,7 +2,7 @@
 import { getEntry, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
-import Breadcrumb from "@/components/Breadcrumb.astro";
+import { res } from "@/resources/generated";
 import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
 import config from "@/config";
@@ -11,7 +11,7 @@ const about = await getEntry("pages", "about");
 
 if (!about) {
   throw new Error(
-    "Missing content entry: `about.md` or `about.mdx` in `src/content/pages/`"
+    "Missing content entry: `about.md` or `about.mdx` in `src/content/pages/`",
   );
 }
 
@@ -26,10 +26,17 @@ const { Content } = await render(about);
 >
   <Header />
 
-  <Breadcrumb />
-
-  <Main pageTitle={about.data.title} class="app-prose">
-    <Content />
+  <Main pageTitle={about.data.title} searchable>
+    <div class="app-prose">
+      <img
+        src={res.images.portrait}
+        alt={config.site.author}
+        width="224"
+        height="272"
+        class="about-portrait"
+      />
+      <Content />
+    </div>
   </Main>
 
   <Footer />

@@ -1,4 +1,5 @@
 ---
+import { res } from "@/resources/generated";
 import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
@@ -25,7 +26,7 @@ const {
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
 const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
-  "rss.xml"
+  "rss.xml",
 );
 ---
 
@@ -33,32 +34,18 @@ const rssHref = getRelativeLocaleUrl(
 <html
   dir={site.dir ?? "ltr"}
   lang={Astro.currentLocale ?? site.lang}
-  class="overflow-y-scroll scroll-smooth"
+  class="overflow-y-scroll"
 >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href={getAssetPath("favicon.svg")} />
-    <link rel="icon" href={getAssetPath("favicon.ico")} />
+    <link rel="icon" type="image/svg+xml" href={res.vectors.favicon} />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Identity verification -->
     <link rel="me" href="https://mastodon.social/@marcprux" />
-    <link
-      rel="pgpkey"
-      type="application/pgp-keys"
-      href={getAssetPath("pgp-key.txt")}
-    />
-
-    <!-- Self-hosted font (declared in src/styles/fonts.css). -->
-    <link
-      rel="preload"
-      href="/fonts/space-grotesk-latin.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <link rel="pgpkey" type="application/pgp-keys" href={res.assets.pgpKey} />
 
     <!-- Primary meta -->
     <title>{title}</title>
@@ -111,11 +98,19 @@ const rssHref = getRelativeLocaleUrl(
     -->
     <script is:inline>
       (function () {
-        const stored = localStorage.getItem("theme");
+        let stored;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch {}
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
-        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const theme =
+          stored === "dark" || stored === "light"
+            ? stored
+            : prefersDark
+              ? "dark"
+              : "light";
         const root = document.firstElementChild;
         root?.setAttribute("data-theme", theme);
         root?.classList.toggle("dark", theme === "dark");

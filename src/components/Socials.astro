@@ -1,40 +1,34 @@
 ---
 import config from "@/config";
-import LinkButton from "./LinkButton.astro";
+import { res } from "@/resources/generated";
 
-const { site, socials } = config;
-
-const icons = import.meta.glob<{
-  default: (_props: Record<string, unknown>) => unknown;
-}>("/src/assets/icons/socials/*.svg");
-
-const items = await Promise.all(
-  socials.map(async ({ name, url, linkTitle }) => {
-    const mod = await icons[`/src/assets/icons/socials/${name}.svg`]?.();
-    const Icon = mod?.default;
-    const title =
-      linkTitle ??
-      (url.startsWith("mailto:") || name === "mail"
-        ? `Send an email to ${site.title}`
-        : `${site.title} on ${name.charAt(0).toUpperCase() + name.slice(1)}`);
-    return { url, title, Icon };
-  })
-);
+const locale = Astro.currentLocale ?? config.site.lang;
+const labels: Record<string, string> = {
+  mail: res.str.footerEmail(locale),
+  github: res.str.footerGitHub(locale),
+  mastodon: res.str.footerMastodon(locale),
+  linkedin: res.str.footerLinkedIn(locale),
+};
+const items = config.socials.map(({ name, url, linkTitle }) => {
+  const label = linkTitle ?? labels[name];
+  if (!label)
+    throw new Error(`Add a localized label for social profile: ${name}`);
+  return { url, label };
+});
 ---
 
-<div class="flex flex-wrap items-center gap-3">
+<nav
+  aria-label={res.str.profileLinks(locale)}
+  class="flex flex-wrap items-center gap-x-5 gap-y-2"
+>
   {
-    items.map(({ url, title, Icon }) =>
-      Icon ? (
-        <LinkButton
-          href={url}
-          class="text-muted-foreground hover:text-accent inline-flex items-center justify-center no-underline transition-colors"
-          title={title}
-        >
-          <Icon class="inline-block size-5 fill-current" />
-          <span class="sr-only">{title}</span>
-        </LinkButton>
-      ) : null
-    )
+    items.map(({ url, label }) => (
+      <a
+        href={url}
+        class="inline-flex min-h-11 items-center text-muted-foreground"
+      >
+        {label}
+      </a>
+    ))
   }
-</div>
+</nav>

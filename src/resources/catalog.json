@@ -1,0 +1,212 @@
+{
+  "locales": {
+    "en": {
+      "nav": {
+        "home": "Home",
+        "posts": "Writing",
+        "tags": "Tags",
+        "about": "About",
+        "archives": "Archives",
+        "search": "Search"
+      },
+      "post": {
+        "publishedAt": "Published at",
+        "updatedAt": "Updated",
+        "sharePostIntro": "Share this post:",
+        "sharePostOn": "Share this post on {{platform}}",
+        "sharePostViaEmail": "Share this post via email",
+        "tagLabel": "Tags",
+        "backToTop": "Back to top",
+        "goBack": "Go back",
+        "editPage": "Edit page",
+        "previousPost": "Previous Post",
+        "nextPost": "Next Post"
+      },
+      "pagination": {
+        "prev": "Prev",
+        "next": "Next",
+        "page": "Page"
+      },
+      "home": {
+        "socialLinks": "Social Links",
+        "featured": "Featured",
+        "recentPosts": "Selected writing",
+        "allPosts": "All writing"
+      },
+      "footer": {
+        "copyright": "Copyright",
+        "allRightsReserved": "All rights reserved."
+      },
+      "pages": {
+        "tagTitle": "Tag",
+        "tagDesc": "All the articles with the tag",
+        "tagsTitle": "Tags",
+        "tagsDesc": "All the tags used in posts.",
+        "postsTitle": "Writing",
+        "postsDesc": "Articles and notes on software.",
+        "archivesTitle": "Archives",
+        "archivesDesc": "All the articles I've archived.",
+        "searchTitle": "Search",
+        "searchDesc": "Search projects, writing, and talks."
+      },
+      "a11y": {
+        "skipToContent": "Skip to content",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "toggleTheme": "Toggle theme",
+        "searchPlaceholder": "Search this site",
+        "noResults": "No results found",
+        "goToPreviousPage": "Go to previous page",
+        "goToNextPage": "Go to next page"
+      },
+      "notFound": {
+        "title": "404 Not Found",
+        "message": "Page Not Found",
+        "goHome": "Go back home"
+      },
+      "navWork": "Work",
+      "navWriting": "Writing",
+      "navTalks": "Talks",
+      "navNotes": "Notes",
+      "navContact": "Contact",
+      "selectedWork": "Selected work",
+      "writing": "Writing",
+      "elsewhere": "Elsewhere",
+      "moreAboutMe": "More about me",
+      "allWriting": "All writing",
+      "viewAllTalks": "View all talks",
+      "selectedTalks": "Selected talks",
+      "recentTalk": "A recent talk",
+      "viewProject": "View project",
+      "visitWebsite": "Visit website",
+      "viewSource": "Source code",
+      "watchTalk": "Watch",
+      "listenTalk": "Listen",
+      "readTranscript": "Read the transcript",
+      "footerEmail": "Email",
+      "footerGitHub": "GitHub",
+      "footerMastodon": "Mastodon",
+      "footerLinkedIn": "LinkedIn",
+      "footerRss": "RSS",
+      "footerPgp": "PGP key",
+      "footerContact": "Contact",
+      "switchToDarkTheme": "Switch to dark theme",
+      "switchToLightTheme": "Switch to light theme",
+      "notesTitle": "Notes",
+      "notesDescription": "Short notes on software and other interests.",
+      "contactTitle": "Contact",
+      "contactDescription": "Email, profiles, and public key for Marc Prud’hommeaux.",
+      "historicalArticle": "From the archive. This article describes the tools and APIs available when it was written.",
+      "archiveLabel": "From the archive",
+      "backToWriting": "Back to writing",
+      "primaryNavigation": "Main navigation",
+      "footerNavigation": "Contact and profiles",
+      "externalLink": "External link",
+      "copyCode": "Copy code",
+      "copiedCode": "Copied",
+      "copyCodeFailed": "Unable to copy code",
+      "pagefindPlaceholder": "Search this site",
+      "pagefindZeroResults": "No results for [SEARCH_TERM]",
+      "pagefindManyResults": "[COUNT] results for [SEARCH_TERM]",
+      "pagefindOneResult": "[COUNT] result for [SEARCH_TERM]",
+      "pagefindClearSearch": "Clear",
+      "pagefindLoadMore": "Load more results",
+      "pagefindSearching": "Searching for [SEARCH_TERM]…",
+      "pagefindSearchLabel": "Search this site",
+      "noWriting": "There are no published articles yet.",
+      "noNotes": "There are no published notes yet.",
+      "returnHome": "Return home",
+      "pronunciationLabel": "Pronunciation",
+      "englishLabel": "English",
+      "frenchLabel": "French",
+      "copyFailed": "Unable to copy code",
+      "zoomImage": "Enlarge image",
+      "imagePreview": "Image preview",
+      "closeImagePreview": "Close image preview",
+      "archivedArticle": "From the archive. This article describes the tools and APIs available when it was written.",
+      "searchLoading": "Loading search…",
+      "searchError": "Search could not load. Please try again.",
+      "searchClear": "Clear search",
+      "searchResults": "Search results",
+      "noResults": "No results found",
+      "mainNavigation": "Main navigation",
+      "profileLinks": "Find me elsewhere",
+      "pagefindFiltersLabel": "Filters",
+      "pagefindTotalZeroResults": "No results",
+      "pagefindTotalOneResult": "[COUNT] result",
+      "pagefindTotalManyResults": "[COUNT] results",
+      "pagefindAltSearch": "No results for [SEARCH_TERM]. Showing results for [DIFFERENT_TERM] instead",
+      "pagefindSearchSuggestion": "No results for [SEARCH_TERM]. Try one of the following searches:",
+      "pagefindResultsLabel": "Search results",
+      "pagefindKeyboardNavigate": "navigate",
+      "pagefindKeyboardSelect": "select",
+      "pagefindKeyboardClear": "clear",
+      "pagefindKeyboardClose": "close",
+      "breadcrumbNavigation": "Breadcrumb",
+      "paginationNavigation": "Pagination",
+      "breadcrumbPage": "{{label}} (page {{page}})",
+      "footerFacebook": "Facebook",
+      "footerTelegram": "Telegram",
+      "allProjects": "More projects"
+    }
+  },
+  "images": {
+    "portrait": "/portrait.webp",
+    "socialPreview": "/default-og.jpg",
+    "dynamicSocialPreview": "/og.png"
+  },
+  "vectors": {
+    "favicon": "/favicon.svg",
+    "chevronLeft": {
+      "import": "@/assets/icons/IconChevronLeft.svg"
+    },
+    "moon": {
+      "import": "@/assets/icons/IconMoon.svg"
+    },
+    "menu": {
+      "import": "@/assets/icons/IconMenuDeep.svg"
+    },
+    "calendar": {
+      "import": "@/assets/icons/IconCalendar.svg"
+    },
+    "arrowRight": {
+      "import": "@/assets/icons/IconArrowRight.svg"
+    },
+    "close": {
+      "import": "@/assets/icons/IconX.svg"
+    },
+    "search": {
+      "import": "@/assets/icons/IconSearch.svg"
+    },
+    "arrowUp": {
+      "import": "@/assets/icons/IconArrowNarrowUp.svg"
+    },
+    "edit": {
+      "import": "@/assets/icons/IconEdit.svg"
+    },
+    "hash": {
+      "import": "@/assets/icons/IconHash.svg"
+    },
+    "arrowLeft": {
+      "import": "@/assets/icons/IconArrowLeft.svg"
+    },
+    "sun": {
+      "import": "@/assets/icons/IconSunHigh.svg"
+    },
+    "linkedin": {
+      "import": "@/assets/icons/socials/linkedin.svg"
+    },
+    "mail": {
+      "import": "@/assets/icons/socials/mail.svg"
+    },
+    "mastodon": {
+      "import": "@/assets/icons/socials/mastodon.svg"
+    }
+  },
+  "fonts": {
+    "spaceGrotesk": "/fonts/space-grotesk-latin.woff2"
+  },
+  "assets": {
+    "pgpKey": "/pgp-key.txt"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "reviewedOn": "2026-10-28",
+  "scope": "Projects, biography, and contact for Marc Prud'hommeaux; site publication prose based on primary sources and user-supplied biography.",
+  "sources": [
+    {
+      "id": "skip-team",
+      "url": "https://skip.dev/about/",
+      "supports": [
+        "Marc and Abe White co-founded Skip in 2023",
+        "Marc worked on Stanza, Kindle, New York Times Cooking, and Bose apps",
+        "Marc and Abe were founding Kodo team members"
+      ],
+      "caution": "This source's statement that Oracle acquired SolarMetric in 2006 conflicts with Apache's FAQ and the acquisition advisor's dated record. Do not repeat it."
+    },
+    {
+      "id": "skip-free",
+      "url": "https://skip.dev/blog/skip-is-free/",
+      "published": "2026-01-21",
+      "supports": [
+        "Skip became completely free and open-source",
+        "Home moved from skip.tools to skip.dev"
+      ]
+    },
+    {
+      "id": "skip-capabilities",
+      "url": "https://skip.dev/docs/",
+      "supports": ["Native iOS and Android apps built from Swift and SwiftUI"],
+      "caution": "Use neutral factual capability wording; omitted marketing superlatives and volatile usage statistics."
+    },
+    {
+      "id": "swift-membership",
+      "url": "https://www.swift.org/android-workgroup/",
+      "supports": [
+        "Marc is a current Android Workgroup member",
+        "Group maintains and develops Swift support for Android"
+      ]
+    },
+    {
+      "id": "swift-founding",
+      "url": "https://forums.swift.org/t/swift-on-android-working-group/77780",
+      "published": "2025-02-10",
+      "supports": [
+        "Marc and Abe listed among initial Android Community Workgroup members"
+      ],
+      "caution": "Community formation preceded official Swift workgroup announcement."
+    },
+    {
+      "id": "swift-official",
+      "url": "https://forums.swift.org/t/announcing-the-android-workgroup/80666",
+      "published": "2025-06-25",
+      "supports": ["Official Swift Android Workgroup announcement"]
+    },
+    {
+      "id": "swift-sdk",
+      "url": "https://forums.swift.org/t/getting-started-with-the-android-swift-sdk/80834",
+      "published": "2025-07-01",
+      "supports": [
+        "Marc published Android SDK development snapshot and described unification work"
+      ]
+    },
+    {
+      "id": "appfair-origin",
+      "url": "https://appfair.org/blog/app-fair-2023-retrospective/",
+      "published": "2023-12-25",
+      "supports": [
+        "App Fair conceived in spring 2022",
+        "2023 was first full year"
+      ],
+      "caution": "Future plans in this historic post are not treated as achieved capabilities."
+    },
+    {
+      "id": "appfair-current",
+      "url": "https://appfair.org/",
+      "supports": [
+        "Organization founded in 2022",
+        "Builds and distributes free mobile applications",
+        "Appfair.net is catalog",
+        "Review/publication workflow"
+      ],
+      "caution": "Homepage has contradictory statements on alternative-store availability: one calls F-Droid and AltStore roadmap items, another describes them as available. Rewritten biography avoids claiming current distribution through these stores."
+    },
+    {
+      "id": "fdroid-role",
+      "url": "https://f-droid.org/2026/04/28/board-appointments-2026.html",
+      "published": "2026-04-28",
+      "supports": ["Marc appointed Vice Chair", "Term listed until 2027"]
+    },
+    {
+      "id": "keepandroidopen",
+      "url": "https://appfair.org/blog/app-fair-2025-retrospective/",
+      "published": "2025-12-31",
+      "supports": [
+        "Marc reports launch of keepandroidopen.org as an advocacy resource"
+      ],
+      "wording": "help run Keep Android Open"
+    },
+    {
+      "id": "stanza-anniversary",
+      "url": "https://press.aboutamazon.com/2009/7/two-million-users-and-12-million-book-downloads-later-stanza-turns-1",
+      "published": "2009-07-13",
+      "supports": [
+        "Stanza iPhone launch in 2008",
+        "Over two million downloads at first anniversary",
+        "Amazon acquired Lexcycle April 2009"
+      ]
+    },
+    {
+      "id": "jline-credit",
+      "url": "https://github.com/jline/jline2/blob/master/pom.xml",
+      "supports": [
+        "Marc credited Original Author Jline 1.x and Developer Emeritus"
+      ],
+      "correction": "Replaced 2002-present date range implying ongoing maintainer role with original-author wording."
+    },
+    {
+      "id": "jline-date",
+      "url": "https://docs.oracle.com/cd/G27582_01/oemli/marc-prudhommeaux---jline-license.html",
+      "supports": ["JLine original copyright begins 2002"],
+      "caution": "Original site already supplied starting year; copyright supports it without establishing a precise launch date."
+    },
+    {
+      "id": "jline-current",
+      "url": "https://jline.org/",
+      "supports": ["Line editing, completion, and history features"]
+    },
+    {
+      "id": "openjpa-history",
+      "url": "https://cwiki.apache.org/confluence/spaces/openjpa/pages/23625/FAQ",
+      "supports": [
+        "Kodo created at SolarMetric in 2001",
+        "BEA purchased SolarMetric November 2005",
+        "Core code donation produced OpenJPA"
+      ]
+    },
+    {
+      "id": "solarmetric-transaction",
+      "url": "https://www.kroll.com/en/transactions/bea-systems-acquires-solarmetric-inc",
+      "published": "2005-11-03",
+      "supports": ["BEA acquisition of SolarMetric announced November 3 2005"]
+    },
+    {
+      "id": "apache-original",
+      "url": "https://incubator.apache.org/projects/openjpa.html",
+      "supports": ["Marc listed as original OpenJPA committer"]
+    },
+    {
+      "id": "cornell",
+      "url": "https://www.jaoo.dk/jaoo2005/speakers/show_speaker.jsp?oid=105",
+      "supports": [
+        "Marc holds BA in Math and Philosophy from Cornell",
+        "Co-founded SolarMetric"
+      ],
+      "caution": "Official event page indexed by search with full biography; direct fetch failed. Existing user-supplied biography already confirms Cornell; added fields from indexed primary source."
+    },
+    {
+      "id": "user-biography",
+      "url": null,
+      "supports": [
+        "FAA Commercial Pilot Certificate Airplane Single-Engine Land",
+        "Instrument Rating",
+        "High-performance endorsement",
+        "Email mwp1@cornell.edu",
+        "PGP fingerprint 24E2 18A5 B630 BCE6 CF56 7109 BB63 E653 5C93 0728"
+      ],
+      "caution": "Retained from repository publication content, not independently checked against private or government records."
+    },
+    {
+      "id": "day-current",
+      "url": "https://daybrite.dev/",
+      "supports": [
+        "Native cross-platform Rust app framework",
+        "Tier 1 macOS/iOS/Android, Tier 2 Windows/Linux",
+        "MPL-2.0 framework and tools"
+      ],
+      "caution": "Marc ownership/activity comes from explicit current user steering, not inferred from website."
+    },
+    {
+      "id": "glimpse-bio",
+      "url": "https://swiftfest.io/speakers/",
+      "supports": [
+        "Marc was founder and principal developer at Glimpse I/O",
+        "Company made database and data visualization apps for Mac/iPhone/iPad"
+      ],
+      "caution": "2019 speaker biography, described as earlier work, no current activity claims."
+    },
+    {
+      "id": "glimpse-code",
+      "url": "https://github.com/glimpseio",
+      "supports": [
+        "Public Glimpse I/O organization with GIO umbrella project for Glimpse app and Swift libraries such as GlimpseXML"
+      ],
+      "caution": "Visible updates are historical; do not imply active product support."
+    },
+    {
+      "id": "glimpse-domain",
+      "url": "https://glimpse.io/",
+      "supports": ["Currently redirects to skip.dev"],
+      "caution": "Not an appropriate historical product landing-page link. Use organization repositories."
+    },
+    {
+      "id": "glimpse-apple",
+      "url": "https://itunes.apple.com/lookup?id=386548524&entity=software&limit=200",
+      "supports": ["Artist Glimpse I/O Inc exists"],
+      "caution": "Current US lookup returned artist only, no apps. Historical third-party mirrors identify DataGlass, Splice, and Glimpse, but no current primary product listing verified; omitted exact DataGlass/Splice claims."
+    },
+    {
+      "id": "appfair-owner-clarification",
+      "source": "Marc’s instructions in this conversation",
+      "supports": [
+        "Use the name “the App Fair Project”",
+        "A non-profit charity based in the United States and France"
+      ],
+      "verification": "User-supplied publication correction."
+    }
+  ],
+  "changes": [
+    "Rewrote About around current work then earlier projects",
+    "Added verified Swift Android and Keep Android Open participation",
+    "Updated F-Droid role",
+    "Separated Contact/PGP from About",
+    "Shortened email boundaries",
+    "Preserved user-supplied personal qualifications without invented anecdotes",
+    "Kept historic project links and source links",
+    "Applied user steering: Day leads current work and metadata; Skip reduced to one earlier-work sentence.",
+    "Added historical Glimpse I/O paragraph using SwiftFest and public organization sources."
+  ],
+  "unresolved": [
+    "Precise dates of Marc's tenure on Stanza and original Kodo team were not independently established; avoided employment date ranges.",
+    "Cornell archived event biography could be read in search but direct page retrieval failed.",
+    "No claim made about current JLine maintenance by Marc.",
+    "No speculative personal preferences or project motivations added.",
+    "Glimpse app lineup and present availability not independently verified from current Apple catalog; historical mirrors were not treated as proof of availability."
+  ]
+}

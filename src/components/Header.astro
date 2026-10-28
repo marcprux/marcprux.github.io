@@ -1,192 +1,150 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
-import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
-import IconSearch from "@/assets/icons/IconSearch.svg";
-import IconMoon from "@/assets/icons/IconMoon.svg";
-import IconX from "@/assets/icons/IconX.svg";
-import LinkButton from "./LinkButton.astro";
-import { stripBase, stripLocale } from "@/utils/withBase";
+import { res } from "@/resources/generated";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
-
-const { site, features } = config;
-
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
-
-const relativePath = stripBase(Astro.url.pathname);
-const pathWithoutTrailingSlash =
-  relativePath.endsWith("/") && relativePath !== "/"
-    ? relativePath.slice(0, -1)
-    : relativePath;
-const currentPath = stripLocale(pathWithoutTrailingSlash, locale);
-
-const isActive = (path: string) => {
-  const currentPathArray = currentPath.split("/").filter(p => p.trim());
-  const pathArray = path.split("/").filter(p => p.trim());
-  return currentPath === path || currentPathArray[0] === pathArray[0];
-};
-
-// Home and About already render the headshot inline. Showing it in the
-// header on those pages would duplicate the view-transition-name and break
-// the morph; everywhere else, render a 32-px version in the header.
-const showHeaderHeadshot = currentPath !== "/" && currentPath !== "/about";
+const path = Astro.url.pathname.replace(/\/$/, "");
+const links = [
+  { path: "work", label: res.str.navWork(locale) },
+  { path: "posts", label: res.str.navWriting(locale) },
+  { path: "talks", label: res.str.navTalks(locale) },
+  { path: "about", label: t.nav.about },
+];
+const Menu = res.vectors.menu;
+const Close = res.vectors.close;
+const Sun = res.vectors.sun;
+const Moon = res.vectors.moon;
 ---
 
 <a
-  id="skip-to-content"
   href="#main-content"
-  class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 transition-all focus:top-4"
+  class="bg-background text-accent absolute -top-full left-6 z-50 p-3 focus:top-4"
+  >{t.a11y.skipToContent}</a
 >
-  {t.a11y.skipToContent}
-</a>
-
-<header class="app-layout pt-8 pb-4">
-  <div class="flex w-full items-center justify-between gap-4">
-    <a
-      href={getRelativeLocaleUrl(locale, "")}
-      class="hover:text-accent text-foreground inline-flex items-center gap-2.5 text-lg font-semibold no-underline transition-colors"
+<header class="site-header site-shell">
+  <div class="header-inner">
+    <a class="wordmark" href={getRelativeLocaleUrl(locale, "")}
+      >{config.site.title}</a
     >
-      {
-        showHeaderHeadshot && (
-          <img
-            src="/headshot.png"
-            alt=""
-            width="32"
-            height="32"
-            class="border-border size-8 shrink-0 rounded-full border object-cover"
-            style="view-transition-name: headshot;"
-          />
-        )
-      }
-      {site.title}
-    </a>
-    <nav id="nav-menu" class="flex items-center">
+    <nav aria-label={res.str.mainNavigation(locale)}>
       <button
         id="menu-btn"
-        class="self-end p-2 sm:hidden"
-        aria-label={t.a11y.openMenu}
+        class="icon-button menu-toggle"
         aria-expanded="false"
         aria-controls="menu-items"
+        aria-label={t.a11y.openMenu}
         data-label-open={t.a11y.openMenu}
         data-label-close={t.a11y.closeMenu}
       >
-        <IconX id="close-icon" class="hidden size-6" />
-        <IconMenuDeep id="menu-icon" class="size-6" />
+        <Menu id="menu-icon" aria-hidden="true" />
+        <Close id="close-icon" class="hidden" aria-hidden="true" />
       </button>
-      <ul
-        id="menu-items"
-        class="bg-background border-border absolute end-5 top-16 z-30 hidden flex-col gap-1 border p-3 sm:static sm:flex sm:flex-row sm:items-center sm:gap-5 sm:border-0 sm:bg-transparent sm:p-0"
-      >
-        <li>
-          <a
-            href={getRelativeLocaleUrl(locale, "posts")}
-            class:list={[
-              "text-foreground hover:text-accent no-underline",
-              { "active-nav": isActive("/posts") },
-            ]}
-          >
-            {t.nav.posts}
-          </a>
-        </li>
-        <li>
-          <a
-            href={getRelativeLocaleUrl(locale, "notes")}
-            class:list={[
-              "text-foreground hover:text-accent no-underline",
-              { "active-nav": isActive("/notes") },
-            ]}
-          >
-            Notes
-          </a>
-        </li>
-        <li>
-          <a
-            href={getRelativeLocaleUrl(locale, "talks")}
-            class:list={[
-              "text-foreground hover:text-accent no-underline",
-              { "active-nav": isActive("/talks") },
-            ]}
-          >
-            Talks
-          </a>
-        </li>
-        <li>
-          <a
-            href={getRelativeLocaleUrl(locale, "about")}
-            class:list={[
-              "text-foreground hover:text-accent no-underline",
-              { "active-nav": isActive("/about") },
-            ]}
-          >
-            {t.nav.about}
-          </a>
-        </li>
+      <ul id="menu-items" class="nav-links">
         {
-          features.search !== false && (
-            <li class="flex items-center">
-              <LinkButton
-                href={getRelativeLocaleUrl(locale, "search")}
-                class:list={[
-                  "text-foreground hover:text-accent inline-flex items-center justify-center no-underline",
-                  { "active-nav": isActive("/search") },
-                ]}
-                title={t.nav.search}
-                aria-label={t.nav.search}
+          links.map((link) => (
+            <li>
+              <a
+                href={getRelativeLocaleUrl(locale, link.path)}
+                aria-current={
+                  path.startsWith(`/${link.path}`) ? "page" : undefined
+                }
               >
-                <IconSearch class="size-5" />
-                <span class="sr-only">{t.nav.search}</span>
-              </LinkButton>
+                {link.label}
+              </a>
             </li>
-          )
+          ))
         }
-        {
-          features.lightAndDarkMode && (
-            <li class="flex items-center">
-              <button
-                id="theme-btn"
-                class="hover:[&>svg]:stroke-accent relative inline-flex size-6 items-center justify-center"
-                title={t.a11y.toggleTheme}
-                aria-label="auto"
-                aria-live="polite"
-              >
-                <IconMoon class="absolute scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-                <IconSunHigh class="absolute scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              </button>
-            </li>
-          )
-        }
+        <li>
+          <button
+            id="theme-btn"
+            class="icon-button"
+            aria-label={res.str.switchToDarkTheme(locale)}
+            data-label-dark={res.str.switchToDarkTheme(locale)}
+            data-label-light={res.str.switchToLightTheme(locale)}
+          >
+            <Moon class="dark:hidden" aria-hidden="true" /><Sun
+              class="hidden dark:block"
+              aria-hidden="true"
+            />
+          </button>
+        </li>
       </ul>
     </nav>
   </div>
 </header>
-
 <script>
-  function toggleNav() {
-    const menuBtn = document.querySelector<HTMLButtonElement>("#menu-btn");
-    const menuItems = document.querySelector("#menu-items");
-    const menuIcon = document.querySelector("#menu-icon");
-    const closeIcon = document.querySelector("#close-icon");
-
-    if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
-
-    const openLabel = menuBtn.dataset.labelOpen ?? "Open menu";
-    const closeLabel = menuBtn.dataset.labelClose ?? "Close menu";
-
-    menuBtn.addEventListener("click", () => {
-      const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
-
-      menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
-      menuBtn.setAttribute("aria-label", openMenu ? openLabel : closeLabel);
-
-      menuItems.classList.toggle("hidden");
-      menuItems.classList.toggle("flex");
-      menuIcon.classList.toggle("hidden");
-      closeIcon.classList.toggle("hidden");
-    });
+  let cleanup = () => {};
+  function setupMenu() {
+    cleanup();
+    const controller = new AbortController();
+    cleanup = () => controller.abort();
+    const { signal } = controller;
+    const button = document.querySelector<HTMLButtonElement>("#menu-btn");
+    const menu = document.querySelector<HTMLElement>("#menu-items");
+    if (!button || !menu) return;
+    const setOpen = (open: boolean) => {
+      menu.dataset.open = String(open);
+      button.setAttribute("aria-expanded", String(open));
+      button.setAttribute(
+        "aria-label",
+        (open ? button.dataset.labelClose : button.dataset.labelOpen)!,
+      );
+      document.querySelector("#menu-icon")?.classList.toggle("hidden", open);
+      document.querySelector("#close-icon")?.classList.toggle("hidden", !open);
+    };
+    button.addEventListener(
+      "click",
+      () => setOpen(button.getAttribute("aria-expanded") !== "true"),
+      { signal },
+    );
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        if (
+          event.key === "Escape" &&
+          button.getAttribute("aria-expanded") === "true"
+        ) {
+          setOpen(false);
+          button.focus();
+        }
+      },
+      { signal },
+    );
+    document.addEventListener(
+      "click",
+      (event) => {
+        if (
+          !menu.contains(event.target as Node) &&
+          !button.contains(event.target as Node)
+        )
+          setOpen(false);
+      },
+      { signal },
+    );
+    menu.addEventListener(
+      "click",
+      (event) => {
+        if ((event.target as Element).closest("a")) setOpen(false);
+      },
+      { signal },
+    );
+    menu.addEventListener(
+      "focusout",
+      (event) => {
+        if (
+          !menu.contains(event.relatedTarget as Node) &&
+          event.relatedTarget !== button
+        )
+          setOpen(false);
+      },
+      { signal },
+    );
+    window
+      .matchMedia("(min-width: 601px)")
+      .addEventListener("change", () => setOpen(false), { signal });
   }
-
-  toggleNav();
-  document.addEventListener("astro:after-swap", toggleNav);
+  setupMenu();
+  document.addEventListener("astro:page-load", setupMenu);
 </script>

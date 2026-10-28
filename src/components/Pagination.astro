@@ -1,8 +1,10 @@
 ---
+import { res } from "@/resources/generated";
+const IconArrowLeft = res.vectors.arrowLeft;
+const IconArrowRight = res.vectors.arrowRight;
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+
 import LinkButton from "./LinkButton.astro";
 import { useTranslations } from "@/i18n";
 
@@ -20,7 +22,7 @@ const t = useTranslations(Astro.currentLocale);
     <nav
       class="mt-auto mb-8 flex justify-center gap-4"
       role="navigation"
-      aria-label="Pagination Navigation"
+      aria-label={res.str.paginationNavigation(Astro.currentLocale)}
     >
       <LinkButton
         disabled={!page.url.prev}

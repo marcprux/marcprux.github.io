@@ -1,20 +1,27 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import Socials from "./Socials.astro";
-
-type Props = {
-  noMarginTop?: boolean;
-} & HTMLAttributes<"footer">;
-
-const { noMarginTop = false, class: className, ...attrs } = Astro.props;
+import { res } from "@/resources/generated";
+import config from "@/config";
+type Props = { noMarginTop?: boolean } & HTMLAttributes<"footer">;
+const { noMarginTop: _noMarginTop, class: className, ...attrs } = Astro.props;
+const locale = Astro.currentLocale ?? config.site.lang;
+const links = [
+  { href: "/contact/", label: res.str.footerContact(locale) },
+  { href: "https://github.com/marcprux", label: res.str.footerGitHub(locale) },
+  {
+    href: "https://mastodon.social/@marcprux",
+    label: res.str.footerMastodon(locale),
+  },
+  { href: "/rss.xml", label: res.str.footerRss(locale) },
+  { href: "/search/", label: res.str.navSearch(locale) },
+];
 ---
 
-<footer
-  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
-  {...attrs}
->
-  <hr />
-  <div class="flex justify-center pb-10">
-    <Socials />
+<footer class:list={["site-footer site-shell", className]} {...attrs}>
+  <div class="footer-inner">
+    <span>{config.site.title}</span>
+    <nav class="footer-links" aria-label={res.str.footerNavigation(locale)}>
+      {links.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
   </div>
 </footer>

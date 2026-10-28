@@ -4,11 +4,12 @@
  * Prefer editing `astro-paper.config.ts` instead of this file. This module exists to
  * apply defaults and expose a fully-resolved config shape (`ResolvedAstroPaperConfig`).
  */
+import { res } from "./resources/paths";
 import userConfig from "@/astro-paper.config";
 import type { ResolvedAstroPaperConfig } from "./types/config";
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 
-const DEFAULT_OG_IMAGE = "default-og.jpg";
+const DEFAULT_OG_IMAGE = res.images.socialPreview.slice(1);
 
 const config: ResolvedAstroPaperConfig = {
   site: {

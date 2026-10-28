@@ -1,6 +1,8 @@
 ---
-import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
-import IconArrowNarrowUp from "@/assets/icons/IconArrowNarrowUp.svg";
+import { res } from "@/resources/generated";
+const IconArrowLeft = res.vectors.arrowLeft;
+const IconArrowNarrowUp = res.vectors.arrowUp;
+
 import { useTranslations } from "@/i18n";
 
 const t = useTranslations(Astro.currentLocale);
@@ -58,7 +60,7 @@ const t = useTranslations(Astro.currentLocale);
 
       progressIndicator.style.setProperty(
         "background-image",
-        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`,
       );
 
       const isVisible = scrollTop / scrollTotal > 0.3;

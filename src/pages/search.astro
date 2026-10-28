@@ -3,7 +3,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import "@pagefind/default-ui/css/ui.css";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
-import Breadcrumb from "@/components/Breadcrumb.astro";
+import { res } from "@/resources/generated";
 import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
 import { getAssetPath } from "@/utils/withBase";
@@ -30,14 +30,12 @@ const t = useTranslations(locale);
 <Layout title={`${t.pages.searchTitle} | ${config.site.title}`}>
   <Header />
 
-  <Breadcrumb />
-
   <Main pageTitle={t.pages.searchTitle} pageDesc={t.pages.searchDesc}>
     <div
       id="pagefind-search"
-      transition:persist
       data-backurl={backUrl}
       data-bundle-path={pagefindBundlePath}
+      data-translations={JSON.stringify(res.pagefindTranslations(locale))}
     >
     </div>
   </Main>
@@ -50,33 +48,26 @@ const t = useTranslations(locale);
     const pageFindSearch: HTMLElement | null =
       document.querySelector("#pagefind-search");
 
-    if (!pageFindSearch) return;
+    if (!pageFindSearch || pageFindSearch.dataset.initialized) return;
+    pageFindSearch.dataset.initialized = "true";
 
     const bundlePath = pageFindSearch?.dataset?.bundlePath;
     if (!bundlePath) return;
 
     const params = new URLSearchParams(window.location.search);
 
-    const onIdle = window.requestIdleCallback || (cb => setTimeout(cb, 1));
+    const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 
     onIdle(async () => {
+      if (!pageFindSearch.isConnected) return;
       // @ts-expect-error — Missing types for @pagefind/default-ui package.
       const { PagefindUI } = await import("@pagefind/default-ui");
-
-      // Display warning inn dev mode
-      if (import.meta.env.DEV) {
-        pageFindSearch.innerHTML = `
-            <div class="bg-muted/75 rounded p-4 space-y-4 mb-4">
-              <p><strong>DEV mode Warning! </strong>You need to build the project at least once to see the search results during development.</p>
-              <code class="block bg-black text-white px-2 py-1 rounded">pnpm run build</code>
-            </div>
-          `;
-      }
 
       // Init pagefind ui
       const search = new PagefindUI({
         element: "#pagefind-search",
         bundlePath,
+        translations: JSON.parse(pageFindSearch.dataset.translations!),
         showImages: false,
         showSubResults: true,
         processTerm: function (term: string) {
@@ -103,8 +94,13 @@ const t = useTranslations(locale);
       searchInput?.addEventListener("input", resetSearchParam);
       clearButton?.addEventListener("click", resetSearchParam);
 
-      function resetSearchParam(e: Event) {
-        if ((e.target as HTMLInputElement)?.value.trim() === "") {
+      function resetSearchParam() {
+        if (
+          !(
+            pageFindSearch?.querySelector<HTMLInputElement>("input")?.value ??
+            ""
+          ).trim()
+        ) {
           history.replaceState(history.state, "", window.location.pathname);
         }
       }

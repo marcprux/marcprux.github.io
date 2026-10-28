@@ -1,0 +1,55 @@
+{
+  "reviewedOn": "2026-10-28",
+  "corrections": [
+    "Java tool name is JShell, not Shell.",
+    "Kotlin legacy REPL is deprecated, so historical usage is distinguished.",
+    "Spring Shell JLine integration is optional."
+  ],
+  "sources": [
+    {
+      "project": "JShell",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/jdk.jshell/share/classes/jdk/internal/jshell/tool/ConsoleIOContext.java",
+      "supports": "JShell imports and uses the JDK-bundled JLine reader and terminal APIs."
+    },
+    {
+      "project": "Scala REPL",
+      "url": "https://github.com/scala/scala3/blob/main/repl/src/dotty/tools/repl/JLineTerminal.scala",
+      "supports": "Scala 3 REPL JLineTerminal constructs JLine line readers, history, completion, and highlighting."
+    },
+    {
+      "project": "Groovy shell",
+      "url": "https://docs.groovy-lang.org/latest/html/documentation/groovysh.html",
+      "supports": "Official shell guide credits JLine for line editing, history and completion."
+    },
+    {
+      "project": "sbt",
+      "url": "https://www.scala-sbt.org/1.x/docs/Running.html",
+      "supports": "Official running guide documents JLine terminal integration in sbt shell."
+    },
+    {
+      "project": "Apache Karaf",
+      "url": "https://github.com/apache/karaf/blob/main/shell/core/src/main/java/org/apache/karaf/shell/impl/console/ConsoleSessionImpl.java",
+      "supports": "ConsoleSessionImpl constructs a JLine LineReader for shell input."
+    },
+    {
+      "project": "Trino CLI",
+      "url": "https://github.com/trinodb/trino/blob/master/client/trino-cli/src/main/java/io/trino/cli/InputReader.java",
+      "supports": "InputReader uses JLine LineReaderBuilder, history, completion, and autosuggestions."
+    },
+    {
+      "project": "Spring Shell",
+      "url": "https://docs.spring.io/spring-shell/reference/execution.html",
+      "supports": "JLineShellRunner is available; SystemShellRunner is now the default, so describe optional integration rather than universal dependency."
+    },
+    {
+      "project": "Kotlin legacy REPL",
+      "url": "https://github.com/JetBrains/kotlin/blob/v2.2.0/plugins/scripting/scripting-compiler/src/org/jetbrains/kotlin/scripting/compiler/plugin/repl/reader/ConsoleReplCommandReader.kt",
+      "supports": "Tagged Kotlin 2.2.0 console REPL reader uses JLine LineReaderBuilder and TerminalBuilder. Retrieved directly from the public GitHub source."
+    },
+    {
+      "project": "Kotlin REPL deprecation",
+      "url": "https://kotlinlang.org/docs/compatibility-guide-22.html#deprecations-to-kotlin-scripting",
+      "supports": "Kotlinc REPL deprecated in 2.1; 2.2 requires -Xrepl opt-in. Avoid presenting as unqualified current default Kotlin tool."
+    }
+  ]
+}

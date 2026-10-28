@@ -1,0 +1,325 @@
+{
+  "reviewed_at": "2026-10-28",
+  "scope": "Marc Prud’hommeaux talks page. Public organizer, speaker, publisher and proceedings sources. Podcast dates mean release dates; conference dates mean event dates.",
+  "file": "/private/tmp/marcprux-redesign/src/content/pages/talks.md",
+  "highlights": [
+    {
+      "title": "Swift on Android",
+      "date": "2026-04-21",
+      "event": "iOSoho, New York",
+      "recording": "https://www.youtube.com/watch?v=KPf2QTZAIZY&t=2229s",
+      "note": "Start at 37:09; original listed only April."
+    },
+    {
+      "title": "Fear and Loathing in the App Stores",
+      "date": "2026-02-01",
+      "event": "FOSDEM main track, Brussels",
+      "recording": "https://archive.fosdem.org/2026/schedule/event/TYZH97-fear-loathing-app-stores/"
+    },
+    {
+      "title": "Introducing the Swift SDK for Android",
+      "date": "2026-01-30",
+      "event": "Swift Pre-FOSDEM Community Event, Brussels",
+      "recording": "https://youtu.be/mZNIAuQ7s7k",
+      "note": "New entry."
+    }
+  ],
+  "entries": [
+    {
+      "id": "iosoho-2026",
+      "date": "2026-04-21",
+      "status": "verified",
+      "sources": [
+        "https://www.meetup.com/iosoho/events/314173946/",
+        "https://skip.dev/blog/swift-on-android-iosoho-meetup/"
+      ],
+      "finding": "Meetup gives April 21. Skip recap was published May 5 and embeds YouTube KPf2QTZAIZY at 2229 seconds. Correct event venue is Capital One, not iOSoho-owned offices. Removed excess venue/simulcast details."
+    },
+    {
+      "id": "fosdem-2026",
+      "date": "2026-02-01",
+      "status": "verified",
+      "sources": [
+        "https://archive.fosdem.org/2026/schedule/event/TYZH97-fear-loathing-app-stores/",
+        "https://appfair.org/blog/fear-and-loathing-in-the-app-stores/"
+      ],
+      "finding": "Organizer schedule Sunday February 1, 12:00–12:25, main track. Full title has subtitle 'when FLOSS principles collide with the Gatekeeper interests'."
+    },
+    {
+      "id": "swift-prefosdem-2026",
+      "date": "2026-01-30",
+      "status": "verified-added",
+      "sources": [
+        "https://swiftlang.github.io/event-fosdem/",
+        "https://swiftlang.github.io/event-fosdem/slides/2026/android-fosdem2026.pdf",
+        "https://skip.dev/talks/fosdem2026/"
+      ],
+      "finding": "Official Swift schedule 15:40–16:00, speaker Marc Prud’hommeaux, links recording mZNIAuQ7s7k and PDF."
+    },
+    {
+      "id": "techlore-2025",
+      "date": "2025-12-10",
+      "status": "verified-added",
+      "sources": [
+        "https://techlore.tech/googles-new-policy-is-an-extinction-event-f-droid-interview/",
+        "https://podcasts.apple.com/bm/podcast/googles-new-policy-is-an-extinction-event-f-droid-interview/id1652151010?i=1000740750114"
+      ],
+      "finding": "Publisher page and distributor release date agree. F-Droid interview about Android developer registration."
+    },
+    {
+      "id": "fsf40-2025",
+      "date": "2025-10-04",
+      "status": "verified-added",
+      "sources": [
+        "https://www.fsf.org/news/fsf40-foundation-panel",
+        "https://www.fsf.org/events/fsf40-celebration",
+        "https://www.fsf.org/news/fsf-turns-forty-with-a-new-president-and-a-new-campaign",
+        "https://appfair.org/blog/fsf40-panel/"
+      ],
+      "finding": "Panel with Paige Collings, Devin Ulibarri, Greg Farough. Event October 4; Marc’s October 6 article is later publication. Heading on site is descriptive rather than an asserted official talk title."
+    },
+    {
+      "id": "swift-package-indexing-61",
+      "date": "2025-08-28",
+      "status": "verified-recording-link-unresolved",
+      "sources": [
+        "https://skip.dev/blog/skip-on-swift-package-indexing-podcast/",
+        "https://forums.swift.org/t/android-episode-on-the-swift-package-indexing-podcast/81933"
+      ],
+      "finding": "Primary Skip post August 28 and Marc/Sven forum exchange confirm episode. Link used is surviving primary episode notes.",
+      "unresolved": "Original https://swiftpackageindexing.transistor.fm/episodes/61-people-have-been-working-on-it-for-ten-years and https://feeds.transistor.fm/swift-package-indexing now return 404; did not claim playable recording."
+    },
+    {
+      "id": "fsfe-30",
+      "date": "2025-02-14",
+      "status": "verified-corrected",
+      "sources": [
+        "https://fsfe.org/news/podcast/episode-30.en.html",
+        "https://appfair.org/blog/softwarefreedom-podcast-interview/"
+      ],
+      "finding": "FSFE official release is February 14, not February 19. February 19 is Marc’s recap publication. Recorded with Bonnie Mehring at FOSDEM."
+    },
+    {
+      "id": "empower-apps-196",
+      "date": "2025-02-12",
+      "status": "verified",
+      "sources": [
+        "https://www.empowerapps.show/196",
+        "https://www.empowerapps.show/196/transcript"
+      ],
+      "finding": "Publisher confirms release date, title, Leo Dion, 56 minutes."
+    },
+    {
+      "id": "fosdem-2025",
+      "date": "2025-02-01",
+      "status": "verified",
+      "sources": [
+        "https://archive.fosdem.org/2025/schedule/event/fosdem-2025-5488-a-free-software-app-store-for-ios-the-app-fair-project-s-perspective-on-the-dma/",
+        "https://appfair.org/blog/fosdem-2025-free-app-stores-and-the-dma/"
+      ],
+      "finding": "Organizer Saturday February 1, 15:00–15:25, Legal and Policy. Link event page with recording rather than bare mirror directory."
+    },
+    {
+      "id": "more-than-just-code-2025",
+      "date": "2025-01-27",
+      "status": "verified-via-publisher-distribution",
+      "sources": [
+        "https://morethanjustcode.com/abe-white-and-marc-prudhommeaux-of-skip-tools-2/",
+        "https://music.amazon.com/podcasts/f6ef7a90-964b-428f-8a2b-b3628f574241/episodes/b98c74d9-de3b-4fc3-ba49-30f6c954ef7f/more-than-just-code-podcast---ios-visionos-and-swift-development-news-and-advice-abe-white-and-marc-prud%27hommeaux-of-skip-tools"
+      ],
+      "finding": "Amazon publisher-distributed metadata confirms January 27, 2025 and 1h12. Publisher website denied automated access (403), so link retained but playback not inspected."
+    },
+    {
+      "id": "talking-kotlin-2024",
+      "date": "2024-12-09",
+      "status": "verified-corrected",
+      "sources": [
+        "https://talkingkotlin.com/going-from-swift-to-kotlin-with-skip/"
+      ],
+      "finding": "Publisher confirms December 9, 64min, guests Abe/Marc and hosts Sebastian/Márton. Removed unsupported claim recorded August2024."
+    },
+    {
+      "id": "libreplanet-2024",
+      "date": "2024-05-04",
+      "status": "verified-corrected",
+      "sources": [
+        "https://libreplanet.org/2024/program/",
+        "https://www.fsf.org/blogs/community/watch-enjoy-share-the-libreplanet-cultivating-community-videos"
+      ],
+      "finding": "Saturday May4 16:00 confirmed. FSF says this session is among recordings missing OR only partially recorded due disk error; original specific assertion 'partial' was stronger than evidence. Link program and recording availability, not nonexistent complete video."
+    },
+    {
+      "id": "compile-swift-s6e9",
+      "date": "2024-03-23",
+      "status": "verified-corrected",
+      "sources": [
+        "https://feeds.transistor.fm/compile-swift",
+        "https://share.transistor.fm/s/2460019b",
+        "https://skip.dev/blog/skip-on-compile-swift-podcast/"
+      ],
+      "finding": "Primary RSS pubDate Sat,23Mar2024 15:01:55-0500. March25 is Skip recap date. Original compileswift.com/podcast/s06e09 redirects to host homepage; replaced with surviving primary player."
+    },
+    {
+      "id": "ec-dma-workshop-2024",
+      "date": "2024-03-18",
+      "status": "verified-added",
+      "sources": [
+        "https://appfair.org/blog/digital-markets-act-workshop/",
+        "https://digital-markets-act.ec.europa.eu/events-poolpage/apple-dma-compliance-workshop-2024-03-18_en",
+        "https://webcast.ec.europa.eu/compliance-with-the-dma-apple-2024-03-18"
+      ],
+      "finding": "Marc attended and asked questions in Q&A. Explicitly described as Q&A, not invited presentation/keynote."
+    },
+    {
+      "id": "compile-swift-s5e31",
+      "date": "2023-11-18",
+      "status": "verified-added",
+      "sources": [
+        "https://share.transistor.fm/s/3f9e9ba2",
+        "https://feeds.transistor.fm/compile-swift"
+      ],
+      "finding": "Publisher player structured data and primary RSS confirm November18, season5 episode31, Abe and Marc."
+    },
+    {
+      "id": "swiftfest-2019",
+      "date": "2019-07-30",
+      "status": "verified",
+      "sources": [
+        "https://swiftfest.io/schedule/",
+        "https://www.pluralsight.com/courses/swiftfest-boston-2019-session-28"
+      ],
+      "finding": "Official day2 TuesdayJuly30 16:00–17:00. Pluralsight publisher recording exists, 50m28s; requires plan/trial. Removed distracting sponsorship and secondary-source exact line count."
+    },
+    {
+      "id": "cornell-celebration-2016",
+      "date": "2016-04-14/2016-04-15",
+      "status": "verified-program-excerpt-and-speaker-confirmation",
+      "sources": [
+        "https://eship.cornell.edu/downloads/2016CelebrationProgram/",
+        "https://news.cornell.edu/stories/2016/04/celebration-draws-cornellian-business-leaders-april-14-15",
+        "Marc supplied a screenshot of program page 6 and confirmed his participation on 2026-10-28."
+      ],
+      "finding": "Decoding the Mobile App World, Symposia Session 3, Panel 2, 11:00am–12:15pm, Statler Hotel Amphitheater. Program lists Marc Prud’Hommeaux ’95, Founder & Principal Developer, Glimpse I/O, alongside Bo Bazylevsky, Ofer Ronen, and Mike Thompson; moderator Deborah Streeter. Sponsored by Cornell Entrepreneur Network and the College of Agriculture & Life Sciences. Cornell Chronicle confirms the April 14–15, 2016 event dates. Public listing uses the event date range because the supplied excerpt does not show the session's calendar date. Automated access to the live program returned 403; the archived viewer HTML survives but its embedded PDF was unavailable."
+    },
+    {
+      "id": "goto-chicago-2015",
+      "date": "2015-05-11",
+      "status": "verified-refined",
+      "sources": [
+        "https://gotocon.com/chicago-2015/schedule/monday.jsp",
+        "https://www.youtube.com/watch?v=vhqXJEX1nXw"
+      ],
+      "finding": "Official MondayMay11 program11:00. YouTube oEmbed verified video title and GOTO Conferences publisher. Old GOTO site TLS certificate chain failed standard urllib; retrieved public page with certificate verification disabled solely for read."
+    },
+    {
+      "id": "infoq-2014",
+      "date": "2014-11-11",
+      "status": "verified-clarified",
+      "sources": ["https://www.infoq.com/interviews/Prudhommeaux-swift/"],
+      "finding": "November11 is publication date, not Aarhus event date. Interview recorded at GOTO Aarhus; WernerSchuster,14:37. Metadata now explicitly Published."
+    },
+    {
+      "id": "goto-aarhus-workshop-2014",
+      "date": "2014-10-01",
+      "status": "verified-expanded",
+      "sources": [
+        "https://gotocon.com/aarhus-2014/training/",
+        "https://gotocon.com/aarhus-2014/schedule/wednesday.jsp"
+      ],
+      "finding": "Official training schedule says Wednesday, Zero toSwift, Marc. October1 follows confirmed conference TuesdaySeptember30. Workshop separated from talk."
+    },
+    {
+      "id": "goto-aarhus-talk-2014",
+      "date": "2014-09-30",
+      "status": "verified-refined",
+      "sources": [
+        "https://gotocon.com/aarhus-2014/tracks/show_track.jsp?trackOID=1001",
+        "https://gotocon.com/aarhus-2014/schedule/tuesday.jsp"
+      ],
+      "finding": "Official TuesdaySeptember30 10:20. Replaced vague September/October. Existing video hHxAMZONnmk could not be inspected; linked official program instead."
+    },
+    {
+      "id": "goto-copenhagen-talk-2014",
+      "date": "2014-09-25",
+      "status": "verified-corrected",
+      "sources": [
+        "https://gotocon.com/cph-2014/tracks/show_track.jsp?trackOID=995"
+      ],
+      "finding": "Official program ThursdaySeptember25 10:20. Original May2014 was wrong (before Swift’s June announcement)."
+    },
+    {
+      "id": "goto-copenhagen-workshop-2014",
+      "date": "2014-09-24",
+      "status": "verified-expanded",
+      "sources": ["https://gotocon.com/cph-2014/schedule/wednesday.jsp"],
+      "finding": "Official ScheduleWednesday24September, Marc, Zero toSwift. Workshop separated from talk."
+    },
+    {
+      "id": "yow-2014",
+      "date": "2014",
+      "status": "unverified-omitted-pending-confirmation",
+      "sources": ["Original repository src/content/pages/talks.md"],
+      "finding": "Original supplied event, title and year could not be independently corroborated. Parent final instruction: omit public listing pending confirmation; preserve evidence here.",
+      "failed_sources": [
+        "https://yowconference.com/talks/marc-prudhommeaux/yow-2014-sydney/swift-new-paradigms-for-ios-development-11083/",
+        "https://www.youtube.com/watch?v=9pbGmaUIo0A"
+      ],
+      "unresolved": "Event URL redirects generic yowcon.com homepage, YouTube oEmbed404, exact-name/title/event searches no usable primary result. Needs Marc confirmation or archived program."
+    },
+    {
+      "id": "sigmod-2007",
+      "date": "2007-06-12/2007-06-14",
+      "status": "verified-corrected-role",
+      "sources": [
+        "https://www.sigmod.org/publications/discs/2007/SIGMOD2007.htm",
+        "https://doi.org/10.1145/1247480.1247581"
+      ],
+      "finding": "Proceedings confirm title, conference dates/location, coauthors PatrickConnorLinskey andMarc, pages889–894. Did not establish who personally delivered presentation; page now accurately labels conference paper rather than in-person talk."
+    },
+    {
+      "id": "jaoo-ejb3-2005",
+      "date": "2005-09",
+      "status": "verified",
+      "sources": [
+        "https://www.jaoo.dk/jaoo2005/tracks/show_track.jsp?trackOID=12",
+        "https://www.jaoo.dk/jaoo2005/speakers/show_speaker.jsp?oid=105"
+      ],
+      "finding": "Organizer Java5.0 track Wednesday14:30 listsMarc. Speaker-page abstract mentions PatrickLinskey in prose, but schedule explicitly Marc. Kept month precision."
+    },
+    {
+      "id": "jaoo-jdo-2005",
+      "date": "2005-09",
+      "status": "verified-corrected",
+      "sources": [
+        "https://www.jaoo.dk/jaoo2005/tutorials/",
+        "https://www.jaoo.dk/jaoo2005/speakers/show_speaker.jsp?oid=105"
+      ],
+      "finding": "Official tutorial Thursday9–16, MarcPrud’hommeaux andCraigRussell. Added omitted co-presenter, kept month precision."
+    }
+  ],
+  "unresolved_summary": [
+    "YOW2014 could not be independently verified; original listing retained in this evidence file and omitted from public timeline pending confirmation.",
+    "Swift Package Indexing61 publisher recording URL/feed404; surviving primary episode notes linked.",
+    "MoreThanJustCode publisher denies automated access403; release verified in publisher-distributed Amazon episode listing.",
+    "LibrePlanet organizers report missing/partial session recording; no full recording claimed.",
+    "SIGMOD paper verified but personal presentation byMarc not established.",
+    "Historical GOTO/JAOO TLS and availability are inconsistent; official program text was available through indexed retrieval and/or direct public fetch."
+  ],
+  "changes": {
+    "new_appearances": 5,
+    "workshops_split_from_existing_combined_entries": 2,
+    "major_date_corrections": [
+      "GOTO Copenhagen May2014 → September25,2014",
+      "FSFE30 February19 → February14,2025",
+      "CompileSwiftS6E9 March25 → March23,2024"
+    ],
+    "new_appearances_list": [
+      "Swift Pre-FOSDEM2026",
+      "Techlore2025",
+      "FSF40panel2025",
+      "AppleDMAworkshopQ&A2024",
+      "CompileSwiftS5E31 2023"
+    ]
+  },
+  "validation": "Content-only rewrite. All original entries considered; YOW omitted pending verification and preserved in evidence. Direct source links accompany each verified public entry. Parent handles build/render validation."
+}

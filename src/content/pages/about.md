@@ -1,72 +1,38 @@
 ---
 title: "About"
-description: "A bit about Marc Prud'hommeaux."
+description: "Marc Prud'hommeaux: software developer working on Day, free software, and mobile app distribution."
 ---
 
-<img src="/headshot.png" alt="Marc Prud'hommeaux" width="160" height="160" class="not-prose mb-6 size-32 rounded-full border border-border object-cover shadow-sm sm:size-40" style="view-transition-name: headshot;" loading="eager" />
+I'm Marc Prud'hommeaux, a software developer in New England. My latest
+work is [Day](https://daybrite.dev/), a framework for building native apps
+in Rust.
 
-I'm **Marc Prud'hommeaux** — a software developer based in New England.
+## What I'm working on
 
-I studied at [Cornell University](https://www.cornell.edu/) and have spent
-most of my career building developer tools and consumer apps across the JVM,
-Apple, and Android ecosystems. I currently serve on the board of the
-[F-Droid project](https://f-droid.org/) and I'm the creator of the
-[App Fair Project](https://appfair.net/), a noncommercial source for free and
-open-source mobile applications.
+**[Day](https://daybrite.dev/)** is an open-source Rust framework for native
+apps on phones and desktops.
 
-## Notable Projects
+I started **[the App Fair Project](https://appfair.org/)** in 2022, a
+non-profit charity based in the United States and France that helps people
+build and distribute free, open-source mobile apps. Browse the
+[app catalog](https://appfair.net/) to see its work.
 
-- **[JLine](https://jline.org/)** *(2002 – present)* — author. A Java
-  library for handling console input, used by many JVM REPLs and command-line
-  tools.
-- **[Apache OpenJPA](https://openjpa.apache.org/)** *(c. 2001 – 2007)* —
-  one of the original creators. Formerly known as *Kodo*, an
-  object-relational persistence engine that was contributed to the Apache
-  Software Foundation.
-- **[Stanza](https://en.wikipedia.org/wiki/Stanza_(software))** *(2008 – 2012)*
-  — creator. An early iOS and desktop e-book reader.
-- **[Skip](https://skip.tools/)** *(2023 – present)* — co-creator. A
-  toolchain for building native iOS and Android apps from a single Swift
-  codebase.
-- **[App Fair](https://appfair.net/)** *(2022 – present)* — creator. A
-  community-run catalog and build infrastructure for free and open-source
-  mobile apps.
+I serve as [Vice Chair of F-Droid's board](https://f-droid.org/2026/04/28/board-appointments-2026.html)
+and help run **[Keep Android Open](https://keepandroidopen.org/)**, a campaign
+for independent app distribution on Android. I write about this work on
+[the App Fair Project’s blog](https://appfair.org/blog/) and discuss it in
+[talks and interviews](/talks/).
 
-## Contact
+I'm also a founding member of the
+[Swift Android Workgroup](https://www.swift.org/android-workgroup/).
 
-You can find me through any of these channels:
+## A little more
 
-- **Email**: [mwp1@cornell.edu](mailto:mwp1@cornell.edu) — see
-  [emailing me](/notes/emailing-me) before sending a long pitch.
-- **Mastodon**: [@marcprux@mastodon.social](https://mastodon.social/@marcprux)
-- **LinkedIn**: [marcprux](https://www.linkedin.com/in/marcprux/)
-- **GitHub**: [marcprux](https://github.com/marcprux)
+I studied mathematics and philosophy at Cornell. I also fly: I hold an FAA
+Commercial Pilot Certificate for Airplane Single-Engine Land, with an
+Instrument Rating and a high-performance endorsement. I aspire to become a seaplane captain, like [this guy](https://youtu.be/BSr-ZSBEq7k?t=897).
 
-For open-source questions about [Skip](https://skip.tools/),
-[JLine](https://jline.org/), [App Fair](https://appfair.net/), or
-[F-Droid](https://f-droid.org/), please file an issue on the relevant
-GitHub repository instead of emailing — that way the answer is searchable
-for the next person with the same question.
+My surname is pronounced _ˈprʊːdəˌmoʊ_ in English and _prydəmo_ in French.
 
-## PGP / Verifying it's me
-
-My public PGP key is available at
-[/pgp-key.txt](/pgp-key.txt). You can import it with:
-
-```bash
-curl https://www.prux.org/pgp-key.txt | gpg --import
-```
-
-Verify you got the right key by checking the fingerprint:
-
-```text
-24E2 18A5 B630 BCE6 CF56  7109 BB63 E653 5C93 0728
-```
-
-Use it for encrypted email to `mwp1@cornell.edu`, or to verify
-detached signatures on anything I publish.
-
-## Off the keyboard
-
-I hold an FAA Commercial Pilot Certificate for Airplane Single-Engine Land,
-with an Instrument Rating and a high-performance endorsement.
+You can [get in touch here](/contact/), or find more of my work on
+[GitHub](https://github.com/marcprux).

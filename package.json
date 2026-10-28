@@ -13,7 +13,10 @@
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "resources": "node scripts/generate-resources.mjs",
+    "predev": "npm run resources",
+    "prebuild": "npm run resources"
   },
   "dependencies": {
     "@astrojs/mdx": "^6.0.1",

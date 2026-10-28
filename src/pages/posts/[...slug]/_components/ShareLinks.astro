@@ -1,54 +1,43 @@
 ---
-import LinkButton from "@/components/LinkButton.astro";
 import { tplStr, useTranslations } from "@/i18n";
+import { res } from "@/resources/generated";
 import config from "@/config";
 
-const { shareLinks } = config;
-const t = useTranslations(Astro.currentLocale);
-
-const icons = import.meta.glob<{
-  default: (_props: Record<string, unknown>) => unknown;
-}>("/src/assets/icons/socials/*.svg");
-
-const pageUrl = Astro.url;
-
-const platformLabel = (name: string) =>
-  name.charAt(0).toUpperCase() + name.slice(1);
-
-const items = await Promise.all(
-  shareLinks.map(async ({ name, url, linkTitle }) => {
-    const mod = await icons[`/src/assets/icons/socials/${name}.svg`]?.();
-    const Icon = mod?.default;
-    const title =
-      linkTitle ??
-      (name === "mail"
-        ? t.post.sharePostViaEmail
-        : tplStr(t.post.sharePostOn, { platform: platformLabel(name) }));
-    return { url, title, Icon };
-  })
-);
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? config.site.url).href;
+const platformNames: Record<string, string> = {
+  facebook: res.str.footerFacebook(locale),
+  telegram: res.str.footerTelegram(locale),
+  mastodon: res.str.footerMastodon(locale),
+  linkedin: res.str.footerLinkedIn(locale),
+};
+const items = config.shareLinks.map(({ name, url, linkTitle }) => {
+  const title =
+    linkTitle ??
+    (name === "mail"
+      ? t.post.sharePostViaEmail
+      : platformNames[name] &&
+        tplStr(t.post.sharePostOn, { platform: platformNames[name] }));
+  if (!title)
+    throw new Error(`Add a localized label for sharing platform: ${name}`);
+  return { href: `${url}${encodeURIComponent(pageUrl)}`, title };
+});
 ---
 
 {
-  items.some(({ Icon }) => Icon) && (
-    <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
-      <span class="italic">{t.post.sharePostIntro}</span>
-      <div class="text-center">
-        {items.map(({ url, title, Icon }) =>
-          Icon ? (
-            <LinkButton
-              href={`${url}${pageUrl}`}
-              class="scale-90 p-2 hover:rotate-6 sm:p-1"
-              title={title}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
-              <span class="sr-only">{title}</span>
-            </LinkButton>
-          ) : null
-        )}
-      </div>
+  items.length > 0 && (
+    <div data-pagefind-ignore class="my-6">
+      <p>{t.post.sharePostIntro}</p>
+      <ul class="flex list-none flex-wrap gap-x-5 gap-y-2 p-0">
+        {items.map(({ href, title }) => (
+          <li>
+            <a href={href} class="inline-flex min-h-11 items-center">
+              {title}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

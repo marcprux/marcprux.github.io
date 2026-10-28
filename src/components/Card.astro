@@ -1,29 +1,25 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getPostUrl } from "@/utils/getPostPaths";
-import { toTransitionName } from "@/utils/toTransitionName";
-import Datetime from "./Datetime.astro";
-
+import config from "@/config";
 type Props = {
   variant?: "h2" | "h3";
+  summary?: boolean;
 } & CollectionEntry<"posts">;
-
-const { variant: Heading = "h2", id, data, filePath } = Astro.props;
-const { title, description, ...props } = data;
+const {
+  variant: Heading = "h2",
+  summary = true,
+  id,
+  data,
+  filePath,
+} = Astro.props;
+const locale = Astro.currentLocale ?? config.site.lang;
 ---
 
-<li class="my-6">
-  <Heading
-    transition:name={toTransitionName(title)}
-    class="text-xl sm:text-2xl"
+<li class="writing-item">
+  <Heading><a href={getPostUrl(id, filePath, locale)}>{data.title}</a></Heading>
+  <time class="post-date" datetime={data.pubDatetime.toISOString()}
+    >{data.pubDatetime.getUTCFullYear()}</time
   >
-    <a
-      href={getPostUrl(id, filePath, Astro.currentLocale)}
-      class="text-foreground hover:text-accent no-underline hover:underline"
-    >
-      {title}
-    </a>
-  </Heading>
-  <Datetime {...props} />
-  <p class="text-muted-foreground mt-1">{description}</p>
+  {summary && <p class="summary">{data.description}</p>}
 </li>

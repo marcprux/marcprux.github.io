@@ -1,18 +1,12 @@
 import type { UIStrings } from "./types";
+import { translations } from "../resources/generated";
 
 export { tplStr } from "./format";
 
-const modules = import.meta.glob<{ default: UIStrings }>("./lang/*.ts", {
-  eager: true,
-});
-
-const translations: Record<string, UIStrings> = {};
-for (const [path, mod] of Object.entries(modules)) {
-  const locale = path.slice("./lang/".length, -".ts".length);
-  translations[locale] = mod.default;
-}
-
-/** Returns UI strings for the given locale, falling back to English. */
+/** Returns generated UI translations for a supported locale. */
 export function useTranslations(locale: string = "en"): UIStrings {
-  return translations[locale] ?? translations["en"];
+  if (!Object.prototype.hasOwnProperty.call(translations, locale)) {
+    throw new Error(`Unsupported UI locale: ${locale}`);
+  }
+  return translations[locale as keyof typeof translations];
 }
